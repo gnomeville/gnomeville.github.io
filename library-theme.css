@@ -1,0 +1,46 @@
+/* Gnomeville Public Library: independent visual identity. Shared by all library pages. */
+.library-page{background:#fff;color:#332c2a;--lib-wine:#673e4b;--lib-ink:#292c2c;--lib-brass:#b5955c;--lib-white:#fff}
+.library-page main.wrap{max-width:1160px;padding-top:1.1rem}
+.library-page .library-label{font:600 .76rem system-ui,sans-serif;letter-spacing:.02em;color:#6a6560;margin:1rem 0}
+.library-page .library-label a{color:#653e4a}
+.library-page .library-banner{background:#fff!important;color:#302e2b!important;border:0!important;border-bottom:3px double #b5955c!important;box-shadow:none!important;margin:0 0 1.1rem!important;padding:2.5rem 1rem 2rem!important;text-align:center}
+.library-page .library-banner:before,.library-page .library-banner:after{display:none!important}
+.library-page .library-banner h1{color:#623b49!important;font-size:clamp(2.7rem,5.7vw,4.5rem)!important;letter-spacing:-.035em;margin:.45rem 0 .7rem}
+.library-page .library-banner p{color:#49423e!important;font-size:1.08rem;max-width:720px;margin:.5rem auto}
+.library-page .library-eyebrow{color:#845c43!important;font:700 .73rem system-ui,sans-serif!important;letter-spacing:.16em;text-transform:uppercase}
+.library-page .library-nav{background:#fff!important;border:0!important;border-bottom:1px solid #d9cfc2!important;box-shadow:none!important;display:flex;flex-wrap:wrap;justify-content:center;gap:0!important;margin:0 0 2rem!important;padding:0!important}
+.library-page .library-nav a{color:#59414b!important;background:transparent!important;border:0!important;border-bottom:3px solid transparent!important;text-transform:none!important;font:600 .91rem system-ui,sans-serif!important;letter-spacing:0!important;padding:.85rem 1.2rem!important;text-decoration:none}
+.library-page .library-nav a:hover,.library-page .library-nav a[aria-current="page"]{color:#43252f!important;background:#f8f4f0!important;border-bottom-color:#a98651!important}
+.library-page .library-divider{display:none!important}
+.library-page .library-box{background:#fff!important;border:0!important;border-top:1px solid #d5c7b4!important;box-shadow:none!important;padding:1.25rem 0 1.8rem!important;margin:0!important}
+.library-page .library-box h2{color:#653d49!important;border:0!important;padding:0!important;font-size:clamp(1.6rem,3vw,2.15rem)!important;font-variant:normal!important;text-transform:none!important}
+.library-page .library-box p{font-size:1.02rem;line-height:1.8}
+.library-page .library-note{background:#f6f1eb!important;border-left:3px solid #a88b5a!important;color:#534a44!important}
+.library-page .library-card{background:#fff!important;box-shadow:none!important;border:1px solid #ded5ca!important;border-top:3px solid #ae9363!important;padding:1.3rem!important}
+.library-page .library-card h3{color:#623b49!important}
+.library-page .library-card-grid{gap:1rem!important}
+.library-page .library-link,.library-page .library-card a{color:#713e50!important}
+.library-page .library-feature{background:#f7f3ef!important;color:#443b35!important;border:0!important;border-left:4px solid #a58b5e!important;box-shadow:none!important}
+.library-page .retro-shell{box-shadow:none!important}
+.library-page .reader{box-shadow:none!important}
+/* Library homepage has its own editorial composition, not the municipal card grid. */
+.library-page .library-home-intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,.8fr);gap:3rem;align-items:start;margin:2rem 0 2.6rem}
+.library-page .library-lead{font-size:1.22rem;line-height:1.8;color:#36322f}
+.library-page .library-side{background:#f6f3ef;border-top:5px solid #704452;padding:1.5rem}
+.library-page .library-side h2{font-size:1.3rem;color:#653d49;margin:.2rem 0 1rem}
+.library-page .library-side p{font-size:.95rem;line-height:1.7}
+.library-page .library-kicker{font:700 .73rem system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:#855d46}
+.library-page .library-home-title{font-size:clamp(1.7rem,3.5vw,2.6rem);color:#633d49;margin:.4rem 0 1rem}
+.library-page .library-collection-list{border-top:2px solid #b5955c}
+.library-page .library-collection-row{display:grid;grid-template-columns:54px minmax(0,1fr) auto;align-items:center;gap:1.2rem;padding:1.35rem .3rem;border-bottom:1px solid #e0d7cc;text-decoration:none;color:inherit}
+.library-page .library-collection-row:hover{background:#fbf8f5}
+.library-page .library-collection-row .number{font:italic 1.5rem Georgia,serif;color:#a58a65}
+.library-page .library-collection-row h3{font-size:1.25rem;color:#623d49;margin:0 0 .25rem}
+.library-page .library-collection-row p{font-size:.92rem;margin:0;color:#665c55}
+.library-page .library-collection-row .arrow{font-size:1.6rem;color:#936e4b}
+.library-page .library-bottom{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin:3rem 0}
+.library-page .library-bottom article{border-top:3px solid #ae9363;padding-top:1rem}
+.library-page .library-bottom h3{color:#623d49;margin:.4rem 0}
+.library-page .library-bottom p{line-height:1.75}
+.library-page .library-smallprint{font:.81rem/1.7 system-ui,sans-serif;color:#766a61}
+@media(max-width:720px){.library-page .library-home-intro,.library-page .library-bottom{grid-template-columns:1fr;gap:1.3rem}.library-page .library-nav a{padding:.75rem .65rem!important;font-size:.8rem!important}.library-page .library-collection-row{grid-template-columns:30px 1fr 20px;gap:.6rem}.library-page .library-banner{padding:1.6rem .3rem!important}}
