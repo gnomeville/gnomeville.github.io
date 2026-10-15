@@ -1,0 +1,44 @@
+
+:root{--green:#203d35;--cream:#faf5e9;--gold:#d3a85e;--ink:#26332d;--muted:#526159}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}a{color:inherit}a:focus-visible{outline:3px solid #a94f64;outline-offset:3px}.notice{background:#172d27;color:#f8ecd4;text-align:center;padding:.55rem 1rem;font:600 .75rem system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}header{background:var(--green);color:#fff8e9;border-bottom:5px solid var(--gold);padding:1rem} .wrap{max-width:1050px;margin:auto}.brand{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}.identity{display:flex;align-items:center;gap:.9rem}.identity img{width:88px;height:88px;object-fit:contain}.identity strong{display:block;font-size:clamp(1.7rem,5vw,2.65rem);line-height:1.1;letter-spacing:.04em}.identity small{font:600 .67rem system-ui,sans-serif;letter-spacing:.16em;color:#e4c995}.tagline{color:#e4c995;font-style:italic}nav{display:flex;gap:.6rem 1.35rem;flex-wrap:wrap;margin-top:1rem;border-top:1px solid #ffffff40;padding-top:.9rem;font:600 .87rem system-ui,sans-serif}nav a{text-decoration:none}nav a:hover{text-decoration:underline}main{padding:1.8rem 1rem 3.5rem}.alert{padding:.8rem 1rem;border-left:5px solid #ad8951;background:#eee5d2;font:.89rem/1.6 system-ui,sans-serif}.alert strong{color:#203d35}.hero{margin-top:1.4rem;padding:3rem 2rem;text-align:center;background:linear-gradient(135deg,#e9dfc7,#fffaf0);border:1px solid #d6c5a3;box-shadow:0 8px 26px #203d3510}.eyebrow{font:700 .73rem system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#815b37}h1{font-size:clamp(2.5rem,7vw,4.5rem);line-height:1.1;margin:.6rem 0}h2{line-height:1.2}.hero p{max-width:650px;margin:1rem auto;font-size:1.14rem}.button{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:.75rem 1.2rem;border-radius:3px;font:700 .84rem system-ui,sans-serif;margin-top:.7rem}.section-title{text-align:center;margin:3rem 0 1.3rem;font-size:2rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:1rem}.card{padding:1.3rem;background:#fffdf8;border:1px solid #d8ccb6;border-top:4px solid var(--gold)}.card h3{margin:.25rem 0 .5rem;font-size:1.23rem}.card p{margin:.3rem 0;color:#4e594f}.tag{font:700 .67rem system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#94516a}.split{display:grid;grid-template-columns:1fr 1.5fr;gap:1.6rem;align-items:center}.mayor-photo{display:block;width:100%;max-height:370px;object-fit:cover;object-position:center 35%;border:8px solid #fffdf8;box-shadow:0 3px 15px #203d3525}.panel{padding:1.6rem;background:#fffdf8;border:1px solid #d8ccb6}.panel h2{margin-top:0}.signature{font-style:italic;color:#536056}.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem}.service{background:#fffdf8;border:1px solid #d8ccb6;padding:1rem;font:600 .9rem system-ui,sans-serif}.service span{margin-right:.5rem}.news-item,.event{padding:.9rem 0;border-bottom:1px solid #d8ccb6}.news-item:last-child,.event:last-child{border-bottom:0}.news-item strong{display:block}.news-item small,.event small{color:var(--muted);font: .78rem system-ui,sans-serif}.event{display:flex;gap:1rem}.datebox{background:#e9dfc7;border:1px solid #cbb997;min-width:58px;display:grid;place-items:center;font:700 .72rem system-ui,sans-serif}.seal-section{text-align:center}.seal-section img{width:min(100%,340px);height:auto;display:block;margin:0 auto 1rem}.seal-section p{max-width:650px;margin:.5rem auto}.bulletin{margin-top:2.4rem;padding:1.4rem 1.8rem;border:2px double #9c835c;background:#f2e8d4}footer{background:var(--green);color:#eee4d1;text-align:center;padding:1.8rem 1rem;font-size:.86rem}footer img{width:76px;height:76px;object-fit:contain}footer p{margin:.3rem}.muted{opacity:.8}@media(max-width:650px){.split{grid-template-columns:1fr}.mayor-photo{max-height:290px;object-fit:contain;background:#ddd}.hero{padding:2.2rem 1rem}.identity img{width:64px;height:64px}.tagline{font-size:.86rem}}
+
+/* MAYORAL OFFICE: approved additional ornamental styling */
+.mayor-page .crumb{font:.8rem system-ui,sans-serif;color:var(--muted);margin-bottom:1.4rem}
+.mayor-page .crumb a{color:#315b4c}
+.mayor-page .eyebrow{font:700 .73rem system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#815b37}
+.mayor-page .intro{text-align:center;border:1px solid #d6c5a3;background:linear-gradient(135deg,#e9dfc7,#fffaf0);padding:2rem 1.2rem;position:relative}
+.mayor-page .intro:before, .mayor-page .intro:after{content:"❧";display:block;color:#a78249;font-size:1.7rem;line-height:1.2}
+.mayor-page h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.13;margin:.55rem 0}
+.mayor-page h2{line-height:1.25;margin:0 0 1rem}
+.mayor-page .intro p{margin:.3rem}
+.mayor-page .layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(240px,1fr);gap:1.5rem;margin-top:1.5rem}
+.mayor-page .panel{background:#fffdf8;border:1px solid #d8ccb6;padding:1.5rem;margin-bottom:1.4rem}
+.mayor-page .panel h2{color:var(--green);border-bottom:1px solid #d9c9aa;padding-bottom:.55rem}
+.mayor-page .panel p:last-child{margin-bottom:0}
+.mayor-page .portrait{width:100%;display:block;object-fit:cover;object-position:center 30%;border:7px solid #fffdf8;box-shadow:0 2px 13px #203d3528}
+.mayor-page .portrait-frame{padding:8px;background:#d1b37c;border:1px solid #9c793c}
+.mayor-page .photo-caption{font:.78rem system-ui,sans-serif;color:var(--muted);text-align:center;margin:.65rem 0 0}
+.mayor-page .facts{border-top:4px solid var(--gold)}
+.mayor-page .facts dl{margin:0}
+.mayor-page .facts div{padding:.65rem 0;border-bottom:1px solid #e7decd}
+.mayor-page .facts dt{font:700 .69rem system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#71583a}
+.mayor-page .facts dd{margin:.12rem 0 0}
+.mayor-page .ornament{text-align:center;color:#a78249;font-size:1.8rem;letter-spacing:.3rem}
+.mayor-page .archive{border-left:5px solid #b49a6a;background:#f3eddf;padding:1rem 1.2rem;margin:1rem 0}
+.mayor-page .archive strong{display:block;font:700 .75rem system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase}
+.mayor-page .fine{font:.82rem system-ui,sans-serif;color:var(--muted)}
+.mayor-page .signature{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-size:clamp(2rem,7vw,3rem);font-style:italic;color:#2b473b;line-height:1.2;margin:1.5rem 0 .2rem;transform:rotate(-3deg);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:8px}
+.mayor-page .signoff{font:.75rem system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mayor-page .gold-rule{height:7px;border-top:1px solid #c6a66e;border-bottom:1px solid #c6a66e;margin:1rem 0}
+.mayor-page .office-note{background:#f0e5cf;border:1px double #a98a55;padding:1rem}
+.mayor-page .button{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:.65rem 1rem;font:700 .8rem system-ui,sans-serif;border-radius:2px}
+@media (max-width:700px){.mayor-page .layout{grid-template-columns:1fr}
+.mayor-page .panel{padding:1.15rem}
+.mayor-page .intro{padding:1.5rem 1rem}}
+
+/* Shared municipal chrome */
+.identity{text-decoration:none}.identity:hover{text-decoration:none}
+nav a[aria-current="page"]{color:#f4d18a;text-decoration:underline;text-underline-offset:5px}
+.mayor-page .portrait{width:100%;height:auto;display:block}
+.mayor-page .portrait-frame{background:#f5eee0}
+.mayor-page .mayor-signature{font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(1.65rem,4vw,2.4rem);line-height:1.3;color:#76502d;transform:rotate(-3deg);margin:1rem 0}
+.mayor-page .ornament{text-align:center;color:#b88b46;font-size:1.6rem;letter-spacing:.3em}
