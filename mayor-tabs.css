@@ -1,0 +1,16 @@
+/* Mayor office: reusable accessible content tabs */
+.mayor-page .mayor-tab-shell{padding:0;overflow:hidden}
+.mayor-tab-shell>.eyebrow,.mayor-tab-shell>h2{margin-left:1.5rem;margin-right:1.5rem}
+.mayor-tab-shell>.eyebrow{padding-top:1.4rem}
+.mayor-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:3px solid #c8a35c;background:#f4ecd9;padding:0 .7rem;gap:.25rem}
+.mayor-tabs button{appearance:none;background:transparent;color:#344b40;border:0;border-bottom:4px solid transparent;padding:.9rem .35rem;cursor:pointer;font:700 .78rem/1.35 system-ui,sans-serif;min-height:55px}
+.mayor-tabs button:hover{background:#e8ddc5}
+.mayor-tabs button[aria-selected="true"]{background:#203d35;color:#fff9e8;border-bottom-color:#d3a85e}
+.mayor-tabs button:focus-visible{outline:3px solid #b26c48;outline-offset:-3px}
+.mayor-tab-panel{padding:1.5rem;min-height:240px}
+.mayor-tab-panel[hidden]{display:none!important}
+.mayor-tab-panel h3{margin-top:0;color:#203d35;font-size:1.4rem}
+.mayor-tab-panel ul{padding-left:1.5rem}
+.mayor-statement{border-left:3px solid #c8a35c;padding:.45rem 1rem;margin:1rem 0;background:#f8f3e9}
+.mayor-page .portrait-frame{background:#d1b37c}
+@media(max-width:650px){.mayor-tabs{grid-template-columns:repeat(2,minmax(0,1fr));padding:.3rem;gap:.25rem}.mayor-tabs button{font-size:.76rem}.mayor-tab-panel{padding:1.15rem}.mayor-tab-shell>.eyebrow,.mayor-tab-shell>h2{margin-left:1.15rem;margin-right:1.15rem}}
