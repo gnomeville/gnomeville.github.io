@@ -12,3 +12,41 @@
 .library-page .reader{background:#202822;color:#e4e8d6;border:8px solid #5a5c4c;box-shadow:inset 0 0 0 2px #92947a,0 8px 22px #17291e33;padding:1rem}.library-page .reader-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:.73rem monospace;color:#d2cba7;margin-bottom:.7rem}.library-page .film-stage{background:#111713;padding:1.1rem;min-height:350px;display:grid;place-items:center;overflow:auto}.library-page .film-paper{position:relative;background:#d1d0b8;color:#303a2d;filter:sepia(.24) contrast(.91);width:min(100%,680px);padding:clamp(1rem,4vw,2.2rem);border:1px solid #777c66;box-shadow:0 0 35px #b3c7a92a;transform-origin:center;transition:transform .18s ease}.library-page .film-paper:after{content:'';pointer-events:none;position:absolute;inset:0;background:repeating-linear-gradient(92deg,transparent 0 43px,#32392a12 44px,transparent 45px 105px),linear-gradient(115deg,#fff7dc14,transparent 42%,#202e2421);mix-blend-mode:multiply}.library-page .film-paper .film-masthead{text-align:center;font-weight:bold;letter-spacing:.08em;font-size:clamp(1rem,4vw,1.5rem);border-bottom:3px double #555e4b;padding-bottom:.6rem}.library-page .film-paper .film-date{text-align:center;font:.68rem monospace;margin:.5rem 0}.library-page .film-paper h2{text-align:center;color:#263226;border:0;font-size:clamp(1.5rem,5vw,2.4rem);line-height:1.06;margin:1rem 0}.library-page .film-paper p{font-size:clamp(.93rem,2.5vw,1.1rem);line-height:1.5}.library-page .film-paper .film-foot{border-top:1px solid #666d5a;font:.72rem monospace;padding-top:.6rem}.library-page .film-controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:1rem 0}.library-page .film-controls button,.library-page .film-controls select{background:#e5e3d2;color:#263a30;border:1px solid #a9a98e;padding:.7rem .85rem;font:700 .8rem system-ui,sans-serif;min-height:42px}.library-page .film-controls button:disabled{opacity:.42;cursor:not-allowed}.library-page .film-controls button[aria-pressed=true]{background:#b39152}.library-page .film-controls label{font:.8rem system-ui,sans-serif}.library-page .film-caption{font:.8rem monospace;color:#b9c4ad}.library-page .film-stage.zoomed .film-paper{width:800px;max-width:none}.library-page .film-stage.zoomed{display:block}.library-page .film-stage.zoomed .film-paper{margin:0 auto}.library-page .reader.no-grain .film-paper:after{display:none}.library-page .reader button:focus-visible,.library-page .reader select:focus-visible{outline:3px solid #e7c077;outline-offset:2px}
 @media(max-width:700px){.library-page .library-columns{grid-template-columns:1fr}.library-page .library-banner{padding:1.8rem 1.2rem}.library-page .film-stage{padding:.55rem;min-height:300px}.library-page .reader{padding:.65rem;border-width:5px}.library-page .film-controls button{flex:1}.library-page .library-nav a{flex:1;text-align:center}}
 @media(prefers-reduced-motion:reduce){.library-page .film-paper{transition:none}}
+
+/* Library identity v2: burgundy, walnut, ivory and brass, deliberately distinct from City Hall */
+.library-page{--lib-burgundy:#66353e;--lib-burgundy-dark:#43242c;--lib-brass:#bb975a;--lib-walnut:#463026;--lib-ivory:#fbf4e6;background:#eee5d6;color:#352d28}
+.library-page main.wrap{max-width:1140px;padding-top:1.5rem}
+.library-page .library-banner{background:radial-gradient(ellipse at 50% -45%,#a76e64 0%,#713c45 53%,#452630 100%);border:8px double #c9a66b;outline:1px solid #684636;outline-offset:5px;text-align:center;padding:3rem 1.5rem;margin:1.6rem 7px 2rem;box-shadow:0 10px 20px #412b2525}
+.library-page .library-banner:before{content:'✥  ❦  ✥';display:block;color:#ead3a2;font-size:1.65rem;letter-spacing:.55em;margin-bottom:.45rem}
+.library-page .library-banner:after{content:'❧';color:#f1d7a012;font-size:13rem;right:-.5rem;bottom:-3.4rem}
+.library-page .library-banner h1{font-size:clamp(2.2rem,6vw,4.15rem);font-variant:small-caps;letter-spacing:.025em;text-shadow:0 2px 2px #27191b66}
+.library-page .library-banner p{margin:.7rem auto;max-width:700px}
+.library-page .library-banner .library-eyebrow{color:#f5dbab}
+.library-page .library-eyebrow{color:#8c4b4c}
+.library-page .library-label{color:#78534c}
+.library-page .library-nav{background:#4d302d;border:3px double #c6a36b;padding:.45rem;justify-content:center;gap:.35rem;box-shadow:0 3px 10px #2f211c25}
+.library-page .library-nav a{background:transparent;color:#f5e9d6;border:1px solid transparent;font-family:Georgia,serif;font-variant:small-caps;font-size:1.03rem;letter-spacing:.03em;padding:.65rem 1.1rem}
+.library-page .library-nav a:hover{background:#ffffff1b;text-decoration:underline}
+.library-page .library-nav a[aria-current=page]{background:#e6d2ad;color:#472c2c;border:1px solid #f4e5c8}
+.library-page .library-box{background:#fcf8ee;border:1px solid #c6b69c;border-top:5px solid #70424a;box-shadow:0 5px 14px #4b362113;padding:1.55rem}
+.library-page .library-box h2{color:#653741;border-bottom:2px solid #c6a46d;font-variant:small-caps;letter-spacing:.015em;font-size:1.7rem}
+.library-page .library-card-grid{gap:1.1rem}
+.library-page .library-card{background:linear-gradient(150deg,#fefbf4,#f2e7d5);border:1px solid #bca98a;border-top:0;box-shadow:inset 0 0 0 4px #fbf4e6,0 3px 8px #48332216;position:relative;padding:1.65rem 1.3rem 1.3rem}
+.library-page .library-card:before{content:'✦';position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:#f7ecda;color:#9b7441;padding:0 .65rem}
+.library-page .library-card h3{font-variant:small-caps;font-size:1.4rem;color:#623943}
+.library-page .library-card a{color:#6a343c}
+.library-page .library-note{background:#f1e5d0;border-left:4px solid #985e60;color:#44382f}
+.library-page .library-link{background:#653741}
+.library-page .library-columns>aside .library-box{border-top-color:#b99a66}
+.library-page .library-columns>aside .library-box:first-child:before{content:'REFERENCE DESK  ✦  INFORMATION';display:block;text-align:center;font:700 .67rem system-ui,sans-serif;letter-spacing:.15em;color:#8d6250;margin-bottom:1rem}
+.library-page .retro-shell{background:#c9c4b5;border:6px ridge #999383;box-shadow:6px 7px 0 #6a6052;padding:1.15rem;color:#253e37}
+.library-page .retro-top{background:#192b29;color:#a7e0b2;border:3px inset #718176;font:700 .86rem 'Courier New',monospace;text-shadow:0 0 5px #7fd09b66}
+.library-page .catalog-record{background:#f8f5e8;border-left:6px solid #80604b}
+.library-page .catalog-record h3{color:#5e363b}
+.library-page .reader{border-color:#514139;box-shadow:inset 0 0 0 2px #ae9974,0 9px 20px #33241d40}
+.library-page .film-controls button[aria-pressed=true]{background:#c6a16b}
+.library-page .library-feature{background:#e8d8ba;border:1px solid #bda275;padding:1rem 1.2rem;margin:1rem 0;display:flex;align-items:center;gap:1rem}
+.library-page .library-feature .library-feature-icon{font-size:2.1rem;line-height:1}
+.library-page .library-feature p{margin:.2rem 0;font-size:.91rem}
+.library-page .library-divider{text-align:center;color:#946a4d;letter-spacing:.8em;font-size:1.2rem;margin:1.3rem 0}
+@media(max-width:700px){.library-page .library-banner{padding:2rem .9rem;margin:1.3rem 5px 1.6rem;border-width:5px}.library-page .library-nav a{flex:1 1 42%;font-size:.92rem;padding:.7rem .3rem}.library-page .library-box{padding:1.1rem}.library-page .library-card{padding:1.5rem 1rem 1rem}}
