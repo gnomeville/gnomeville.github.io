@@ -44,3 +44,22 @@
 .library-page .library-bottom p{line-height:1.75}
 .library-page .library-smallprint{font:.81rem/1.7 system-ui,sans-serif;color:#766a61}
 @media(max-width:720px){.library-page .library-home-intro,.library-page .library-bottom{grid-template-columns:1fr;gap:1.3rem}.library-page .library-nav a{padding:.75rem .65rem!important;font-size:.8rem!important}.library-page .library-collection-row{grid-template-columns:30px 1fr 20px;gap:.6rem}.library-page .library-banner{padding:1.6rem .3rem!important}}
+
+/* Library photography, v4: independent image assets, no collateral crops */
+.library-page .lib-photo{margin:0;overflow:hidden;background:#f4f0e8}
+.library-page .lib-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.library-page .lib-photo-hero{height:clamp(235px,38vw,450px);margin:0 0 2.2rem}
+.library-page .lib-photo-hero img{object-position:center 51%}
+.library-page .lib-photo-books{height:195px;margin:1.5rem 0 0}
+.library-page .lib-photo-books img{object-position:center 48%}
+.library-page .library-home-intro{grid-template-columns:minmax(0,1.35fr) minmax(250px,.85fr);gap:2rem}
+.library-page .lib-photo-ollie{grid-column:2;grid-row:1;align-self:start;aspect-ratio:4/3}
+.library-page .library-home-intro>.library-side{grid-column:2;grid-row:1;margin-top:calc(min(28vw,290px) + 1.3rem)}
+.library-page .lib-collection-thumb{width:118px;height:82px;object-fit:cover;border-radius:2px}
+.library-page .library-collection-row{grid-template-columns:54px minmax(0,1fr) 118px auto}
+.library-page .lib-program-feature{display:grid;grid-template-columns:1.25fr 1fr;gap:2rem;align-items:center;margin:3rem 0;padding:0 0 2.3rem;border-bottom:1px solid #e0d7cc}
+.library-page .lib-program-feature .lib-photo{aspect-ratio:3/2}
+.library-page .lib-program-feature h2{font-size:clamp(1.6rem,3vw,2.2rem);color:#633d49;margin:.5rem 0}
+.library-page .lib-program-feature p{line-height:1.8}
+.library-page .lib-subpage-photo{height:clamp(180px,30vw,320px);margin:0 0 1.8rem}
+@media(max-width:720px){.library-page .library-home-intro{display:flex;flex-direction:column;gap:1.2rem}.library-page .lib-photo-ollie{width:100%;max-height:290px}.library-page .library-home-intro>.library-side{margin-top:0;width:100%}.library-page .library-collection-row{grid-template-columns:30px minmax(0,1fr) 70px 16px}.library-page .lib-collection-thumb{width:70px;height:70px}.library-page .lib-program-feature{grid-template-columns:1fr;gap:1.2rem}.library-page .lib-photo-hero{height:245px}}
