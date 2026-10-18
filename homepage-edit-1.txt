@@ -1,0 +1,19 @@
+GNOMEVILLE HOMEPAGE UPDATE (index.html)
+
+In GitHub, open index.html, tap Edit (pencil), and find:
+<article class="card"><span class="tag">Digital Services • Coming Soon</span><h3>GnomeNet</h3><p>Your future gateway to GnoTube, GnomeMail, NutHub, GMZ, and more.</p></article>
+
+Replace that ONE exact segment with:
+<a class="card service-link" href="gnomenet.html"><span class="tag">Digital Services • Now Online</span><h3>GnomeNet ↗</h3><p>Search Gnomeville, visit Twisted Sisters Café, browse the Gazette, and discover everything the municipality would rather you did not.</p></a>
+
+Commit changes.
+
+Upload the accompanying site.js file to replace the existing site.js. This adds Library and GnomeNet to the top navigation on every page.
+
+Upload library-card.html as a NEW file. Its URL will be:
+https://gnomeville.github.io/library-card.html
+
+For the Library homepage, add this link wherever you would like the application advertised:
+<a href="library-card.html">Apply for a Library Card →</a>
+
+No backend, accounts, or personal data collection are involved. Applications and their absurd errors happen locally in the browser.
