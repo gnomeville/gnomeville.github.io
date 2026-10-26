@@ -1,103 +1,104 @@
 <!DOCTYPE html>
 
-<!DOCTYPE html>
-
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Society | The Gnomeville Gazette</title><link href="../assets/gazette-mark.svg" rel="icon" type="image/svg+xml"/><link href="../assets/gazette-icon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="../assets/gazette-icon-180.png" rel="apple-touch-icon"/><style>
-:root{--paper:#fffaf0;--ink:#211a16;--red:#801e32;--gold:#bd954c;--line:#8e8371}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:#e9e4d9;font:17px Georgia,serif}a{color:var(--red)}button{cursor:pointer}header,main,footer{max-width:1160px;margin:auto;background:var(--paper)}.top{background:#211c1a;color:#fff;display:flex;align-items:center;gap:20px;padding:9px 18px;font:14px Arial,sans-serif;flex-wrap:wrap}.top a{color:#fff;text-decoration:none}.top .home{color:var(--gold);font-size:23px}.search{margin-left:auto}.search input{padding:7px;background:#fffaf0;border:1px solid #a49b8e}.mast{position:relative;text-align:center;padding:30px 15px 22px;border-bottom:4px double #221e1b;overflow:hidden}.mast h1{font-size:clamp(39px,7vw,83px);line-height:1;margin:0;font-weight:700;letter-spacing:-4px}.flourish{font-size:24px;color:#536e3c;letter-spacing:10px;margin-bottom:4px}.meta{display:flex;justify-content:space-between;font:13px Arial,sans-serif}.motto{font-style:italic;font-size:13px}.season{position:absolute;top:6px;font-size:43px;display:none}.season.left{left:18%}.season.right{right:15%}body.halloween .season{display:block}.nav{display:flex;justify-content:space-around;gap:6px;flex-wrap:wrap;background:var(--red);padding:12px 8px}.nav a{font:bold 13px Arial,sans-serif;color:white;text-decoration:none}.ticker{background:#f5e9cc;border-bottom:2px solid var(--gold);padding:10px 14px;font:14px Georgia;white-space:nowrap;overflow:hidden}.ticker b{background:#201914;color:#fff;padding:7px;margin-right:12px}main{padding:18px}.grid{display:grid;grid-template-columns:2.1fr 1fr .95fr;gap:16px}.grid>*{min-width:0}.section{border-top:3px solid var(--red);padding-top:7px;margin-bottom:17px}.section h2{font:700 16px Arial,sans-serif;color:var(--red);text-transform:uppercase;margin:0 0 9px}.lead h2{font:bold clamp(27px,3.3vw,49px)/.97 Georgia;color:var(--ink);letter-spacing:-1px}.lead .dek{font-size:21px}.photo{background:linear-gradient(135deg,#25283e,#63455d 60%,#9b6742);color:white;min-height:230px;display:grid;place-items:center;text-align:center;font-size:55px;border:1px solid #7e7061}.photo small{font:italic 15px Georgia;display:block}.story{border-bottom:1px solid #b7aa97;padding:10px 0}.story a{font-weight:bold;text-decoration:none;color:#241b18}.story p{margin:5px 0;font-size:15px}.story:hover a{text-decoration:underline}.mini{display:flex;gap:10px}.thumb{flex:0 0 76px;min-height:70px;background:#e4d8c1;display:grid;place-items:center;font-size:35px}.weather{background:#163b4d;color:#fff;text-align:center;padding:14px}.weather strong{font-size:35px}.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:8px 13px;font:13px Arial;margin-top:9px}.event{display:flex;gap:12px;border-bottom:1px solid #c5b9a8;padding:10px 0}.date{border:1px solid var(--red);padding:5px;text-align:center;min-width:55px;font:14px Arial}.date b{display:block;background:var(--red);color:#fff}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:12px}.card{border-top:3px solid var(--red);padding-top:8px}.card h3{font:700 15px Arial;color:var(--red);text-transform:uppercase}.card .photo{min-height:125px;font-size:42px}.card h4{font-size:20px;margin:9px 0 5px}.card p{font-size:15px}.bottom{margin-top:25px}.sky{height:65px;background:#171614;clip-path:polygon(0 55%,3% 55%,3% 30%,5% 30%,5% 57%,8% 57%,8% 20%,10% 20%,10% 56%,15% 56%,15% 45%,18% 45%,18% 65%,23% 65%,23% 25%,25% 25%,25% 60%,30% 60%,30% 45%,34% 45%,34% 60%,39% 60%,39% 35%,42% 35%,42% 60%,48% 60%,48% 12%,50% 12%,50% 59%,56% 59%,56% 36%,60% 36%,60% 63%,67% 63%,67% 30%,70% 30%,70% 55%,75% 55%,75% 48%,80% 48%,80% 62%,85% 62%,85% 22%,88% 22%,88% 54%,93% 54%,93% 35%,96% 35%,96% 60%,100% 60%,100% 100%,0 100%)}footer{background:#171614;color:#fff;text-align:center;padding:0 10px 18px;font:13px Arial}footer a{color:#fff;margin:0 8px}.article{max-width:770px;margin:10px auto 40px}.article h2{font-size:clamp(32px,5vw,54px);line-height:1.05}.article p{font-size:19px;line-height:1.65}.article .byline{font:14px Arial;color:#695e55}.hide{display:none}#results{margin:20px 0}#results a{display:block;padding:9px;border-bottom:1px solid #ddd}@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.lead{grid-column:1/-1}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){main{padding:12px}.grid,.cards{grid-template-columns:1fr}.lead{grid-column:auto}.mast h1{letter-spacing:-2px}.season{font-size:29px}.season.left{left:7%}.season.right{right:6%}.flourish{font-size:17px}.top{gap:10px}.search{margin-left:0}.nav{justify-content:flex-start}.nav a{padding:4px}}
-
-/* Gazette original illustrated assets, October 2026 edition */
-.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.mast{padding:9px 0 0;background:#fffaf0}.mast .meta{padding:4px 20px 0}.mast-art{height:clamp(155px,25vw,292px);background-image:url("../assets/halloween-masthead.webp");background-position:center center;background-repeat:no-repeat;background-size:contain;display:none}.flourish-art{height:clamp(48px,10vw,118px);background:url("../assets/halloween-flourish.webp") center center/contain no-repeat;display:none}.mast .motto{padding:5px 12px 13px}.sky{height:105px;clip-path:none;background:#171614 url("../assets/gnomeville-night-skyline.webp") center bottom/cover no-repeat}footer{padding-top:0}.top .home{font-size:28px;font-weight:bold;line-height:1;color:#bd954c}
-body.halloween .mast-art,body.halloween .flourish-art{display:block}body.halloween .mast{background:#f9efe0}body.halloween .mast .meta{position:relative;z-index:1}body.halloween .mast .motto{background:#fffaf0}body:not(.halloween) .mast h1{position:static!important;width:auto;height:auto;margin:12px auto;overflow:visible;clip:auto;white-space:normal;font-size:clamp(35px,7vw,77px);letter-spacing:-3px}body:not(.halloween) .mast:before{content:'❧  ❦  ❧  ❦  ❧';display:block;color:#6d7140;font-size:24px;padding-top:16px}body:not(.halloween) .mast:after{content:'❧  ❦  ❧';display:block;color:#6d7140;font-size:20px;padding-bottom:12px}
-@media(max-width:540px){.mast-art{height:clamp(100px,25vw,165px)}.flourish-art{height:clamp(30px,10vw,65px)}.mast .meta{font-size:10px}.mast .motto{font-size:11px}.sky{height:70px}}
-
-/* Halloween masthead: both artwork strips share the same intrinsic width.
-   Aspect-ratio sizing prevents the lower ornament from shrinking on phones. */
-body.halloween .mast-art,
-body.halloween .flourish-art {
-  display:block;
-  width:100%;
-  height:auto;
-  background-size:100% 100%;
-  background-position:center;
-  background-repeat:no-repeat;
-}
-body.halloween .mast-art { aspect-ratio:1536 / 390; }
-body.halloween .flourish-art { aspect-ratio:1536 / 165; }
-body.halloween .mast { padding-left:0; padding-right:0; }
-.photo img,.thumb img{width:100%;height:auto;max-height:380px;object-fit:contain;display:block;margin:auto}.thumb img{max-height:85px}.article figure{margin:24px 0}.article figure img{max-width:100%;height:auto;border:1px solid #cfc2ae}.article .photo img{max-height:none}.lead .photo img{max-height:440px;object-fit:cover}
-/* GNOMEVILLE GAZETTE | approved trial layout, 2026-10-25 */
-:root{--paper:#fffdf8;--ink:#211a16;--red:#801e32;--gold:#bd954c;--line:#a69a8c}
-body{background:#f4f1ec}
-header,main,footer{max-width:1160px}
-.grid{grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:22px;align-items:start}
-.grid>.lead{grid-column:1;grid-row:1 / span 2}
-.grid>section.section:not(.lead){grid-column:2;grid-row:1}
-.grid>aside{grid-column:2;grid-row:2}
-.lead .photo{min-height:0;background:#eeeae4}
-.lead .photo img{max-height:370px;object-fit:contain}
-.section{margin-bottom:15px}
-.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{min-width:0}
-.card .photo{background:#eeeae4;color:#63554a}
-.article{max-width:760px;margin:20px auto 50px;padding:0 12px}
-.article h2{line-height:1.13;letter-spacing:-.02em}
-.article .photo{min-height:0;background:#eeeae4}
-.article .photo img{max-height:430px;object-fit:contain}
-.article p{line-height:1.7}
-.nav a:focus-visible,.top a:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.section-page{max-width:820px;margin:20px auto 55px;padding:16px 22px 30px;border-top:4px solid var(--red)}
-.section-page h2{font:700 clamp(28px,4vw,43px)/1.15 Georgia,serif;margin:16px 0}
-.section-page p{font:18px/1.6 Georgia,serif}
-.section-page .status{display:inline-block;font:700 12px Arial,sans-serif;letter-spacing:.12em;color:var(--red);text-transform:uppercase}
-.section-page .section-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
-.section-page .section-stories a{display:block;border-top:2px solid var(--red);padding:12px 4px;text-decoration:none;font-weight:bold}
-#results{max-width:900px;margin:20px auto}
-@media(max-width:850px){.grid{grid-template-columns:minmax(0,1.6fr) minmax(220px,1fr)}.grid>.lead{grid-column:1;grid-row:1 / span 2}.grid>section.section:not(.lead){grid-column:2;grid-row:1}.grid>aside{grid-column:2;grid-row:2}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.grid>.lead,.grid>section.section:not(.lead),.grid>aside{grid-column:1;grid-row:auto}.cards,.section-page .section-stories{grid-template-columns:1fr}.section-page{padding:12px}}
-
-/* Trial v1.2: stable, accessible static pages */
-.mast-art,.flourish-art{display:block!important;width:100%!important;height:auto!important;background-repeat:no-repeat!important;background-size:100% 100%!important;background-position:center!important}
-.mast-art{aspect-ratio:1536/390!important}.flourish-art{aspect-ratio:1536/165!important}
-.mast{background:var(--paper)!important;padding:0!important}.mast .meta{padding:8px 20px 0}.mast:before,.mast:after{display:none!important}
-.mast h1.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important}
-.sky{height:105px;background-size:cover!important;background-position:center bottom!important}
-footer{position:relative;overflow:hidden}footer:before{display:none!important}
-.cards:empty,.bottom:empty{display:none!important}
-.article-page{max-width:810px;margin:0 auto 35px}.article-page h2{font-size:clamp(30px,5vw,50px);line-height:1.1}.article-page p{font-size:19px;line-height:1.7}.article-page .byline{font:14px Arial,sans-serif;color:#695e55}.article-page .photo{min-height:0;background:none;border:0}.article-page .photo img{max-height:540px;object-fit:contain}.article-page .return{display:inline-block;margin:12px 0 18px}.article-page .dek{font-size:21px;font-weight:bold}.article-page .article-body p{margin:1em 0}.article-page figure{margin:20px 0}.article-page figure img{max-width:100%;height:auto}
-.placeholder-page{max-width:850px;margin:0 auto 35px;min-height:45vh}.placeholder-page h2{font-size:clamp(30px,5vw,48px)}.placeholder-page p{font-size:19px;line-height:1.6}.placeholder-page .status{color:var(--red);font:bold 13px Arial;text-transform:uppercase;letter-spacing:.1em}.placeholder-page .story-link{display:block;padding:12px 0;border-top:1px solid #b7aa97;font-weight:bold}.static-card{border-top:3px solid var(--red);padding-top:8px}.static-card h4{font-size:20px;margin:10px 0}.static-card p{font-size:15px}.static-card img{width:100%;height:180px;object-fit:contain;background:#eee9e1}.static-card a{color:var(--red)}
-@media(max-width:650px){.mast-art{aspect-ratio:1536/390!important}.flourish-art{aspect-ratio:1536/165!important}.article-page p{font-size:18px}.sky{height:70px}}
-
-/* Gazette trial v1.3: responsive editorial layouts */
-.article-page{max-width:1090px;margin:18px auto 55px;padding:0 10px}
-.article-page>.return{display:inline-block;margin:0 0 18px}
-.article-page>h2{max-width:1000px;line-height:1.12;margin:0 0 20px;overflow-wrap:break-word}
-.article-page>.byline{margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid #d4c9bc;line-height:1.5}
-.article-page>.dek{font-size:clamp(19px,2.4vw,25px);line-height:1.42;margin:20px 0 28px}
-.article-editorial{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(240px,.9fr);gap:26px;align-items:start;margin:0 0 25px}
-.article-editorial.layout-reverse{grid-template-columns:minmax(240px,.9fr) minmax(0,1.8fr)}
-.article-editorial.layout-reverse .article-photo{grid-column:2;grid-row:1}
-.article-editorial.layout-reverse .article-rail{grid-column:1;grid-row:1}
-.article-editorial.layout-wide{display:block}
-.article-editorial.layout-wide .article-photo{max-width:100%;margin:0 auto 20px}
-.article-editorial.layout-wide .article-rail{max-width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.article-photo{min-width:0;background:none!important;border:0!important;min-height:0!important;display:block!important;margin:0!important;padding:0!important}
-.article-photo img{display:block;width:100%;height:auto;max-height:550px;object-fit:contain;margin:0 auto}
-.article-photo figcaption{font:italic 13px/1.45 Arial,sans-serif;color:#635a54;margin-top:8px}
-.article-rail{min-width:0}
-.rail-item{border-top:3px solid var(--red);padding:12px 10px 17px;margin-bottom:15px;background:#f7f4ef}
-.rail-item h3{font:700 14px/1.35 Arial,sans-serif;color:var(--red);text-transform:uppercase;letter-spacing:.035em;margin:0 0 9px}
-.rail-item p{font:16px/1.5 Georgia,serif;margin:0 0 9px}
-.rail-item a{font:700 14px/1.5 Arial,sans-serif}
-.article-page>.article-body{max-width:760px;margin:0 auto}
-.article-page>.article-body p{line-height:1.7}
-/* Keep existing skyline asset, but crop its upper edge where the partial sign peeks out. */
-.sky{background-size:auto 155%!important;background-position:center bottom!important;overflow:hidden}
-/* Keep the existing illustrated masthead visible outside Halloween as well. */
-body:not(.halloween) .mast-art,body:not(.halloween) .flourish-art{display:block!important}
-body:not(.halloween) .mast-art{width:100%;height:auto;aspect-ratio:1536/390;background-size:100% 100%;background-repeat:no-repeat}
-body:not(.halloween) .flourish-art{width:100%;height:auto;aspect-ratio:1536/165;background-size:100% 100%;background-repeat:no-repeat}
-body:not(.halloween) .mast h1{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;margin:-1px!important}
-body:not(.halloween) .mast:before,body:not(.halloween) .mast:after{display:none!important}
-@media(max-width:700px){.article-editorial,.article-editorial.layout-reverse{display:flex;flex-direction:column;gap:18px}.article-editorial.layout-reverse .article-photo,.article-editorial.layout-reverse .article-rail{width:100%}.article-editorial.layout-wide .article-rail{display:block}.article-page{padding:0 2px}.article-page>.byline{margin-bottom:24px}.rail-item{padding:12px 13px}.sky{background-size:auto 150%!important}}
-</style><link href="../assets/gazette-site.css" rel="stylesheet"/><script defer="True" src="../assets/gazette-site.js"></script></head><body><header><div class="top"><a aria-label="Gazette home" class="home" href="../index.html"><img alt="" height="32" src="../assets/gazette-mark.svg" style="display:block;border-radius:6px" width="32"/></a><a href="../index.html">Home</a><a href="../sections/about.html">About</a><a href="../sections/archives.html">Archives</a><a href="../sections/submissions.html">Submit a Story</a><a href="../sections/advertise.html">Advertise</a><form class="search" id="search"><input aria-label="Search Gazette" id="q" placeholder="Search the Gazette..."/><button>⌕</button></form></div><div class="mast"><div class="meta"><span>GNOMEVILLE, IL</span><span id="edition">Date loading…</span></div><div aria-label="The Gnomeville Gazette Halloween masthead: sleeping witch gnome, vampire flamingo, autumn leaves and carved pumpkins" class="mast-art" role="img"></div><div aria-hidden="true" class="flourish-art"></div><h1 class="visually-hidden">The Gnomeville Gazette</h1><div class="motto">All the News That's Fit to Fabricate.   •   Serving the Gnomes. Respect the Flamingos. Question Everything.</div></div><nav class="nav"><a href="../index.html">NEWS</a><a href="../sections/society.html">SOCIETY</a><a href="../sections/arts.html">ARTS &amp; CULTURE</a><a href="../sections/police.html">POLICE BLOTTER</a><a href="../sections/letters.html">OPINION</a><a href="../sections/comics.html">COMICS &amp; PUZZLES</a><a href="../sections/classifieds.html">CLASSIFIEDS</a><a href="../sections/archives.html">ARCHIVES</a></nav><div class="ticker"><b>BREAKING NEWS »</b> SQUIRRELS REMAIN AT LARGE ✤ MAYOR CALLS FOR CALM ✤ LIBRARY REQUESTS RETURN OF OVERDUE MANUSCRIPT ✤ SALTY PETE DECLINES COMMENT</div></header><main><section class="placeholder-page"><a href="../index.html">← Front Page</a><p class="status">Section in development</p><h2>Society</h2><p>Social news, celebrations, and questionable public appearances.</p><a class="story-link" href="../articles/cake-crime-spree.html">Cake Decorating Class Descends Into Crime Spree →</a><p><a href="../index.html">← Return to the Gazette</a></p></section></main><footer><div aria-label="Gnomeville rooftops illuminated at night" class="sky" role="img"></div><div>THE GNOMEVILLE GAZETTE • Independently questionable since 1969</div><p><a href="../index.html">Home</a><a href="../sections/archives.html">Archives</a><a href="../sections/letters.html">Letters</a><a href="../sections/classifieds.html">Classifieds</a></p></footer></body></html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Society &amp; Scandal | The Gnomeville Gazette</title>
+<link href="../assets/gazette-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/gazette-site.css" rel="stylesheet"/><script defer="" src="../assets/gazette-site.js"></script>
+<style>
+.society{max-width:1030px;margin:auto;font-family:Georgia,serif;color:#27211e;font-size:17px;line-height:1.62}.society .back{font:14px Arial;margin-bottom:18px}.society .kicker{font:700 12px Arial;letter-spacing:.13em;color:#7c2137;margin-top:22px}.society h1{font:bold clamp(32px,5vw,52px)/1.05 Georgia;margin:8px 0}.society h2{font:bold clamp(24px,3.2vw,35px)/1.14 Georgia;margin:12px 0}.society h3{font:bold 19px/1.3 Georgia;margin:18px 0 7px}.society p{margin:10px 0 15px}.society .tagline{font:italic 21px Georgia;margin:8px 0}.society .by{border-bottom:4px double #7c2137;padding-bottom:18px;font-size:15px}.society .fashion-watch{border:4px double #8b233e;background:#faf0e5;padding:17px 20px;margin:22px 0}.fashion-watch>strong{display:block;font:bold 20px Georgia}.fashion-watch>span{font:bold 13px Arial;color:#7c2137;letter-spacing:.08em}.fashion-watch small{font-style:italic}.society .lead{border-bottom:4px double #7c2137;padding-bottom:22px}.society .portrait{float:right;width:min(42%,370px);margin:5px 0 17px 25px;border:1px solid #a89d91;padding:7px;background:#fff}.society .portrait img{width:100%;height:auto;display:block}.society figcaption{font:italic 13px/1.45 Georgia;padding:9px 3px 3px}.society .shout{font:bold 26px Georgia;color:#8b233e}.society .secondary{padding:18px 0;border-bottom:4px double #7c2137}.society .edit-note{padding:12px 15px;border-left:4px solid #b58b50;background:#f5efe4;font-style:italic}.society .soc-section{margin:30px 0;border-bottom:2px solid #c4b9a7;padding-bottom:24px}.society .section-sub{font-style:italic;margin-top:0}.society .cards,.society .register{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px}.society .cards>div{border-top:2px solid #8b233e;padding:10px 0}.society .cards h3{font:700 14px Arial;letter-spacing:.04em;color:#7c2137;margin:0 0 5px}.society .cards p{margin:0}.society .register>div{padding:12px 14px;background:#f8f4eb;border-left:3px solid #b58b50}.society .register b{display:block;font:700 15px Arial;color:#7c2137}.society .register em{display:block;font-size:14px}.society .register p{margin:5px 0 0}@media(max-width:700px){.society .portrait{float:none;width:100%;max-width:420px;margin:18px auto}.society .cards,.society .register{grid-template-columns:1fr}.society{font-size:17px}}
+</style></head>
+<body><header><div class="top"><a aria-label="Gazette home" class="home" href="../index.html"><img alt="" src="../assets/gazette-mark.svg"/></a><a href="../index.html">Home</a><a href="about.html">About</a><a href="archives.html">Archives</a><a href="submissions.html">Submit a Story</a><a href="advertise.html">Advertise</a><form class="search" id="search"><input aria-label="Search Gazette" id="q" placeholder="Search the Gazette..."/><button type="submit">⌕</button></form></div>
+<div class="mast"><div class="meta"><span>GNOMEVILLE, IL</span><span id="edition">Date loading…</span></div><div aria-label="The Gnomeville Gazette illustrated masthead" class="mast-art" role="img"></div><div aria-hidden="true" class="flourish-art"></div><div class="motto">All the News That's Fit to Fabricate. • Serving the Gnomes. Respect the Flamingos. Question Everything.</div></div>
+<nav class="nav"><a href="../index.html">NEWS</a><a href="society.html">SOCIETY</a><a href="arts.html">ARTS &amp; CULTURE</a><a href="police.html">POLICE BLOTTER</a><a href="letters.html">OPINION</a><a href="comics.html">COMICS &amp; PUZZLES</a><a href="classifieds.html">CLASSIFIEDS</a><a href="archives.html">ARCHIVES</a></nav><div class="ticker"><b>BREAKING NEWS »</b> SQUIRRELS REMAIN AT LARGE ✤ MAYOR CALLS FOR CALM ✤ LIBRARY REQUESTS RETURN OF OVERDUE MANUSCRIPT ✤ SALTY PETE DECLINES COMMENT</div></header>
+<main>
+<div class="society"><a class="back" href="../index.html">← Front Page</a>
+<div class="kicker">THE GNOMEVILLE GAZETTE · SOCIETY DESK</div>
+<h1>SOCIETY &amp; SCANDAL</h1><p class="tagline">The Social Register, the Fashion Wars, and Other People's Business</p>
+<p class="by">Gnomeville's most trusted source for information nobody was supposed to repeat. <strong>By Constance Tittle-Tattle, Society Editor</strong></p>
+<div class="fashion-watch"><strong>THE GAZETTE FASHION WATCH</strong><span>CURRENT SOCIAL CLIMATE: VOLATILE</span><p><b>Bette Moorecock:</b> Maintaining standards.   <b>Lucy:</b> Challenging standards.   <b>Gertie Marrow:</b> Setting standards on fire.</p><small>The Fashion Desk is monitoring developments.</small></div>
+<article class="lead">
+<div class="kicker">EXCLUSIVE SOCIETY REPORT · THE WAR OF THE WARDROBES</div>
+<h2>THREE WOMEN. TWO WARDROBES. ONE MOHAWK.</h2><h3>Gnomeville's Fashion Establishment Faces an Unprecedented Crisis</h3>
+<figure class="portrait"><img alt="Gertie Marrow wearing her signature hot pink mohawk, celestial dress, and shimmering purple-pink cape on a softly decorated porch." loading="eager" src="../assets/society/gertie-marow-fashion-portrait.jpg"/><figcaption><b>GERTIE MARROW</b> arrives on the fashion scene. Society has requested a moment to collect itself. <i>Gazette Society Desk portrait.</i></figcaption></figure>
+<p>For years, Gnomeville's fashionable society has operated under a delicate understanding: Bette Moorecock sets the standards, everyone else attempts to meet them, and nobody asks how much any of it costs.</p>
+<p>That understanding is now under threat.</p>
+<p>The arrival of Lucy, a glamorous newcomer whose extensive wardrobe required its own luggage operation, was initially dismissed by established society figures as a temporary disturbance. That assessment has since been revised.</p>
+<p>Sources report that Lucy possesses enough clothing to maintain an entirely different personality for every day of the month. More troubling still, she appears perfectly willing to do so.</p>
+<p>Bette Moorecock, whose longstanding position as Gnomeville's foremost fashion authority has rarely been challenged, has reportedly responded by increasing her public appearances and making several pointed remarks about the difference between <em>owning clothes</em> and <em>having style</em>.</p>
+<p>Lucy, when approached for comment, opened her beak. Our correspondent withdrew.</p>
+<h3>ENTER GERTIE MARROW</h3>
+<p>Just as society observers were preparing for a prolonged rivalry between Lucy and Bette, a third contender emerged from an entirely unexpected quarter.</p>
+<p><strong>Gertie Marrow has entered the fashion arena.</strong></p>
+<p>Long associated with a more restrained approach to personal presentation, Miss Marrow has recently undergone what one observer described as "a complete wardrobe situation."</p>
+<p>Her collection of garments has reportedly expanded at an extraordinary rate. But it is her latest hairstyle that has truly shaken Gnomeville's social establishment.</p>
+<p class="shout">A HOT PINK MOHAWK.</p>
+<p>Witnesses describe the look as bold, unapologetic, and structurally impressive. One resident reportedly dropped an entire biscuit upon seeing it.</p>
+<p>Miss Marrow has offered no formal explanation for her transformation. Her companion, Paw-Paw, was asked whether he approved of the new look. He stared silently ahead. This newspaper interprets his response as supportive.</p>
+<h3>THE QUESTION ON EVERYONE'S LIPS</h3>
+<p>Is Gnomeville witnessing the beginning of a three-way fashion war?</p>
+<p>Bette represents established elegance. Lucy represents theatrical glamour. Gertie represents the increasingly popular philosophy that one should wear whatever one pleases, particularly if it alarms the neighbors.</p>
+<p>The Gazette has requested comment from all three parties. Bette's representatives have not responded. Lucy has reportedly requested a larger photograph. Gertie is believed to be shopping.</p>
+<p><b>DEVELOPING STORY.</b></p></article>
+<article class="secondary"><div class="kicker">SOCIAL SPECULATION · EXCLUSIVE</div><h2>PAW-PAW AND GERTIE: GNOMEVILLE'S MOST INTRIGUING COUPLE?</h2><h3>A quiet gentleman, a flamboyant companion, and a pink dog who knows too much.</h3>
+<p>While Gertie's increasingly extravagant wardrobe has captured public attention, society observers have begun asking questions about the gentleman frequently seen at her side.</p>
+<p>Paw-Paw, a longtime resident known for his reserved demeanor, has recently been spotted accompanying Miss Marrow on several occasions. The pair have also been seen in the company of Bowser, their distinctive pink skeletal dog.</p>
+<p>Although neither Paw-Paw nor Gertie has publicly defined the nature of their relationship, their frequent appearances together have fueled considerable speculation.</p>
+<p>One witness described them as "inseparable." Another described Paw-Paw as "standing there." Both accounts are considered credible.</p>
+<h3>AN UNLIKELY SOCIAL ASCENT</h3><p>Friends of the couple suggest that Gertie's influence may be encouraging Paw-Paw to participate more actively in Gnomeville's social life. Previously content to remain quietly in the background, he has recently been observed standing in entirely different locations. The transformation has been remarkable.</p>
+<p>Asked whether wedding bells might eventually ring, a source close to the couple replied: "Well, they certainly have a dog together."</p>
+<p>The Gazette considers this significant.</p>
+<p class="edit-note"><b>Society Editor's Note:</b> No engagement has been announced. Nevertheless, the Society Desk has begun compiling a preliminary guest list.</p></article>
+<section class="soc-section"><h2>SEEN &amp; OVERHEARD</h2><p class="section-sub">Because someone was always watching.</p>
+<div class="cards">
+<div><h3>AT THE TWISTED SISTERS CAFÉ</h3><p>Cecil Glowbones was overheard explaining the distinction between a properly decorated cake and "an act of deliberate culinary insubordination." Webster, Esq., was seen taking notes. No charges have been filed. Yet.</p></div>
+<div><h3>IN THE FASHION DISTRICT</h3><p>A prominent resident remarked that hot pink was "a desperate bid for attention." Moments later, Gertie Marrow passed wearing her mohawk. The resident declined further comment.</p></div>
+<div><h3>AT A MUNICIPAL FUNCTION</h3><p>Mayor Thimblewick was spotted leaving a reception carrying a bottle of red wine. His office maintains the bottle was being transported for administrative purposes.</p></div>
+<div><h3>NEAR THE CAFÉ</h3><p>Liza Joy approached several individuals with "an extremely enthusiastic expression." All three agreed to be her friends. Two were unaware negotiations had begun.</p></div>
+<div><h3>AT THE NASKERMAN RESIDENCE</h3><p>Milo Naskerman occupied a chair that moments earlier had been occupied by someone else. The incident is described as a peaceful transfer of power.</p></div>
+</div></section>
+<section class="soc-section"><h2>THE GNOMEVILLE SOCIAL REGISTER</h2><p class="section-sub">Who's Who, Who's New, and Who's Pretending Not to Care</p>
+<div class="register">
+<div><b>BETTE MOORECOCK</b><em>Established Fashion Authority</em><p>An arbiter of taste whose position has recently attracted unwanted competition.</p></div>
+<div><b>LUCY</b><em>New Arrival and Wardrobe Enthusiast</em><p>An increasingly prominent figure. Frequently photographed. Rarely cooperative.</p></div>
+<div><b>GERTIE MARROW</b><em>Emerging Style Icon</em><p>Her expanding wardrobe and hot pink mohawk have captivated Gnomeville.</p></div>
+<div><b>PAW-PAW</b><em>Gentleman of Few Words</em><p>His silence is frequently interpreted as agreement.</p></div>
+<div><b>BOWSER</b><em>Companion Animal and Social Accessory</em><p>A pink skeletal dog whose fashion influence remains to be determined.</p></div>
+<div><b>CECIL GLOWBONES</b><em>Cake Decorating Tsar</em><p>Exacting standards and an expansive interpretation of authority.</p></div>
+<div><b>WEBSTER, ESQ.</b><em>General Counsel</em><p>Frequently seen with Cecil; remarkably skilled at avoiding conversational entanglement.</p></div>
+<div><b>HIS HONOR, MAYOR THIMBLEWICK</b><em>Mayor of Gnomeville</em><p>A familiar presence at receptions offering refreshments. Departures seldom announced.</p></div>
+</div></section>
+<section class="soc-section"><h2>THE SOCIAL CALENDAR</h2><p class="section-sub">Upcoming Events of Considerable Importance</p>
+<div class="cards"><div><h3>TWISTED SISTERS AUTUMN SOCIAL</h3><p><b>Date:</b> Subject to clean tablecloths. Coffee, cake, music, and possible unscheduled confrontations. Dress code: festive. Shoes recommended.</p></div>
+<div><h3>FASHIONABLE LADIES' AUTUMN LUNCHEON</h3><p>Invitations reportedly issued; guest list withheld. Several residents have announced they would not attend even if invited.</p></div>
+<div><h3>PAW-PAW &amp; GERTIE'S INFORMAL GATHERING</h3><p>No invitations, date, or confirmed event. The Society Desk has reserved space for photographs.</p></div></div></section>
+<section class="soc-section"><h2>SOCIETY NOTICES</h2><div class="cards"><div><h3>CONGRATULATIONS, GERTIE!</h3><p>On becoming one of Gnomeville's most discussed fashion personalities. Several residents request advance warning of the next ensemble.</p></div><div><h3>A WARM WELCOME TO LUCY</h3><p>We look forward to chronicling her contributions to local culture. Future interviews are respectfully requested without lunging.</p></div></div>
+<p class="edit-note">The Society Desk welcomes birthdays, engagements, anniversaries, achievements, and significant changes in social standing. Submissions may be made by those concerned or anyone who believes they know something interesting. Verification is encouraged but not mandatory.</p></section>
+<p class="back"><a href="../index.html">← Return to the Gazette</a> · <a href="../articles/cake-crime-spree.html">Related: Cake Decorating Class Descends Into Crime Spree</a></p>
+</div>
+</main><footer><div aria-label="Gnomeville rooftops at night" class="sky"></div><div>THE GNOMEVILLE GAZETTE • Independently questionable since 1969</div><p><a href="../index.html">Home</a><a href="archives.html">Archives</a><a href="letters.html">Letters</a><a href="classifieds.html">Classifieds</a></p></footer>
+<dialog aria-labelledby="formTitle" id="application"><div class="modal-head"><div><div style="font:12px Arial;letter-spacing:.1em">GNOMEVILLE GAZETTE · OFFICIAL DOCUMENT</div><h2 id="formTitle">FORM ADV-001</h2><div style="font:13px Arial">Application for Permission to Request Advertising Space</div></div><button aria-label="Close application" id="closeForm" type="button">×</button></div>
+<div class="modal-body"><form id="advForm"><p class="fine">Please complete every applicable field. The Department reserves the right to deem additional fields applicable.</p><div class="form-grid">
+<label class="field">Applicant name or alias<input autocomplete="off" maxlength="90" name="applicant" required=""/></label>
+<label class="field">Business or affiliation<input maxlength="90" name="business" placeholder="Optional, pending verification"/></label>
+<label class="field">Advertisement category<select name="category" required=""><option value="">Select one…</option><option>Classified</option><option>Display advertisement</option><option>Official notice</option><option>Personal grievance</option><option>Lost &amp; Found</option><option>Anonymous accusation</option><option>Other / Unclassifiable</option></select></label>
+<label class="field">Does the advertised subject exist?<select name="existence" required=""><option value="">Select one…</option><option>Yes</option><option>No</option><option>Previously</option><option>Under investigation</option><option>Unknown</option></select></label>
+<label class="field full">Why do you wish to communicate with the public?<textarea maxlength="700" name="reason" placeholder="Explain yourself." required=""></textarea></label>
+<label class="field">Are you currently under investigation?<select name="investigation" required=""><option value="">Select one…</option><option>Yes</option><option>No</option><option>Not officially</option><option>I decline to speculate</option></select></label>
+<label class="field">Expected date of publication<input name="publication" type="date"/></label>
+</div><label class="check"><input required="" type="checkbox"/><span>I acknowledge that this is not an advertising application, that no approval is implied, and that the Department may request paperwork not yet invented.</span></label><button type="submit">SUBMIT REQUEST FOR PERMISSION</button></form>
+<div aria-live="polite" class="receipt hidden" id="receipt" role="status"><div class="eyebrow">APPLICATION RECEIVED · PENDING PRELIMINARY ACKNOWLEDGMENT</div><h2>Thank you for submitting ADV-001.</h2><p>Your request for permission to request an advertising application has been received.</p><p><strong>Reference number:</strong></p><div class="ref" id="reference"></div><p>Please retain this number for future correspondence. The Gazette accepts no responsibility for correspondence.</p><p class="fine">This receipt is fictional and stored nowhere. Printing it is permitted but may complicate matters.</p><button class="no-print" id="printReceipt" type="button">PRINT RECEIPT</button> <button class="no-print" id="newApplication" type="button">NEW APPLICATION</button></div>
+</div></dialog>
+<script>
+(function(){
+const modal=document.getElementById('application'),form=document.getElementById('advForm'),receipt=document.getElementById('receipt');
+document.getElementById('openForm').addEventListener('click',()=>modal.showModal());
+document.getElementById('closeForm').addEventListener('click',()=>modal.close());
+modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
+function randomInt(max){if(window.crypto&&crypto.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]%max;}return Math.floor(Math.random()*max);}
+form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;
+const number='ADV-'+String(randomInt(999)+1).padStart(3,'0')+'-'+String(randomInt(1000000)).padStart(6,'0');
+document.getElementById('reference').textContent=number;form.classList.add('hidden');receipt.classList.remove('hidden');});
+document.getElementById('newApplication').addEventListener('click',()=>{form.reset();receipt.classList.add('hidden');form.classList.remove('hidden');form.querySelector('input').focus();});
+document.getElementById('printReceipt').addEventListener('click',()=>window.print());
+})();
+</script></body></html>
