@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "description": "Public websites indexed by GnomeNet. Add one entry for each new website; optional per-site search-index.json enables article-level indexing.",
+  "sites": [
+    {
+      "name": "Municipality of Gnomeville",
+      "url": "/index.html",
+      "icon": "🏛️",
+      "description": "Official municipal portal, departments and resident services.",
+      "keywords": "government city hall municipality"
+    },
+    {
+      "name": "The Gnomeville Gazette",
+      "url": "/gazette/",
+      "icon": "📰",
+      "description": "Independent municipal news and investigations.",
+      "keywords": "gazette news newspaper"
+    },
+    {
+      "name": "Wikignome",
+      "url": "/wikignome/",
+      "icon": "📖",
+      "description": "The Gnomepedia Project. Accuracy Not Guaranteed.",
+      "keywords": "encyclopedia biographies residents"
+    },
+    {
+      "name": "Chirp",
+      "url": "/chirp/",
+      "icon": "🐦",
+      "description": "The town speaks for itself.",
+      "keywords": "social posts profiles"
+    },
+    {
+      "name": "Twisted Sisters Café",
+      "url": "/twisted-sisters.html",
+      "icon": "☕",
+      "description": "Excessive whipped cream. Questionable qualifications.",
+      "keywords": "cafe coffee cakes"
+    },
+    {
+      "name": "Château Gnomeville",
+      "url": "/chateau-gnomeville/",
+      "icon": "🍷",
+      "description": "Independent wine estate, established 1823.",
+      "keywords": "wine vineyard chateau"
+    },
+    {
+      "name": "Ollie’s Library",
+      "url": "/library.html",
+      "icon": "📚",
+      "description": "Reading rooms, research, and rare manuscripts.",
+      "keywords": "library books"
+    },
+    {
+      "name": "The Rook Report",
+      "url": "/rook-report.html",
+      "icon": "🦝",
+      "description": "Confessions of a Municipal Nobody.",
+      "keywords": "rook blog"
+    },
+    {
+      "name": "Office of the Mayor",
+      "url": "/mayor.html",
+      "icon": "🐸",
+      "description": "Official office of Mayor Thimblewick.",
+      "keywords": "mayor government"
+    },
+    {
+      "name": "Gnomeville Police Department",
+      "url": "/police.html",
+      "icon": "🚓",
+      "description": "Municipal law enforcement.",
+      "keywords": "police incidents"
+    }
+  ]
+}
