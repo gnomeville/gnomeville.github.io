@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "title": "Ollie’s Library: Public Access Catalog",
+      "url": "/catalog.html",
+      "type": "Websites",
+      "icon": "📚",
+      "description": "Browse the Gnomeville Public Library catalog and featured collection.",
+      "keywords": "library catalog books search collection shelves"
+    },
+    {
+      "title": "Ollie’s Library: Historical Microfilm Room",
+      "url": "/microfilm.html",
+      "type": "Websites",
+      "icon": "🎞️",
+      "description": "Explore the library's historical microfilm reader and digitized reels.",
+      "keywords": "library historical microfilm reel archives history"
+    },
+    {
+      "title": "Ollie’s Library: Special Collections",
+      "url": "/special-collections.html",
+      "type": "Websites",
+      "icon": "📜",
+      "description": "Explore the library's public special-collections exhibits and research spaces.",
+      "keywords": "library special collections gnomeville babylon research map room manuscripts"
+    },
+    {
+      "title": "Ollie’s Library: Library Card Applications",
+      "url": "/library-card.html",
+      "type": "Websites",
+      "icon": "🪪",
+      "description": "Public information and application page for library borrowing privileges. No applicant data is indexed.",
+      "keywords": "library card application borrowing privileges"
+    },
+    {
+      "title": "Ollie’s Library: Gnomeville Babylon Exhibit",
+      "url": "/special-collections.html#babylon",
+      "type": "Websites",
+      "icon": "📖",
+      "description": "Public Gnomeville Babylon exhibit in the library's special collections.",
+      "keywords": "gnomeville babylon special collections library exhibit"
+    }
+  ]
+}

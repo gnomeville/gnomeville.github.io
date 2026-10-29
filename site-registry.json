@@ -42,14 +42,16 @@
       "url": "/chateau-gnomeville/",
       "icon": "🍷",
       "description": "Independent wine estate, established 1823.",
-      "keywords": "wine vineyard chateau"
+      "keywords": "wine vineyard chateau",
+      "index": "/chateau-gnomeville/search-index.json"
     },
     {
       "name": "Ollie’s Library",
       "url": "/library.html",
       "icon": "📚",
       "description": "Reading rooms, research, and rare manuscripts.",
-      "keywords": "library books"
+      "keywords": "library books",
+      "index": "/library-search-index.json"
     },
     {
       "name": "The Rook Report",
