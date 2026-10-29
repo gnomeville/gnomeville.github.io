@@ -1,4 +1,4 @@
-/* Gnomeville Public Library catalog v3. Canonical 47 holdings remain in catalog-collection.js. */
+/* Gnomeville Public Library catalog v4. Canonical 47 holdings remain in catalog-collection.js. */
 (()=>{'use strict';
 const records=window.GNOMEVILLE_CATALOG||[];
 const results=document.getElementById('catalog-results');if(!results)return;
@@ -11,7 +11,12 @@ let browsingAll=!!requestedId;
 const featured=document.getElementById('catalog-featured'),track=document.getElementById('featured-track');
 const lower=v=>String(v||'').toLocaleLowerCase();
 const node=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
-const knownCovers={'GPL-027':{src:'library-images/death-at-flip-flop-cove-front.png',alt:'Approved front cover of Death at Flip Flop Cove by Piper Bonesley'}};
+const knownCovers={
+ 'GPL-010':{src:'library-images/who-moved-my-cheese-front.png',alt:'Approved cover of Who Moved My Cheese? An Investigation into the 1987 Dairy Disappearance'},
+ 'GPL-011':{src:'library-images/goodnight-gnome-front.png',alt:'Approved cover of Goodnight Gnome'},
+ 'GPL-027':{src:'library-images/death-at-flip-flop-cove-front.png',alt:'Approved cover of Death at Flip Flop Cove'},
+ 'GPL-030':{src:'library-images/aloha-means-alibi-front.png',alt:'Approved cover of Aloha Means Alibi'}
+};
 const destinations={'GPL-001':'microfilm.html?reel=1969-TH','GPL-002':'microfilm.html?reel=004-B','GPL-003':'special-collections.html#babylon','GPL-006':'microfilm.html?reel=1969-TH'};
 function recordLink(r){return 'catalog.html?record='+encodeURIComponent(r.id)}
 function clearDeepLink(){if(!requestedId)return;const u=new URL(location.href);u.searchParams.delete('record');history.replaceState(null,'',u.pathname+u.search+u.hash)}
