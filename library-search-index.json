@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "pages": [
     {
       "title": "Ollie’s Library: Public Access Catalog",
@@ -40,6 +40,46 @@
       "icon": "📖",
       "description": "Public Gnomeville Babylon exhibit in the library's special collections.",
       "keywords": "gnomeville babylon special collections library exhibit"
+    },
+    {
+      "title": "Boners of the Dead",
+      "url": "/catalog.html?record=GPL-048",
+      "type": "Websites",
+      "icon": "📖",
+      "description": "Cataloged; synopsis and publication details pending. By Rook Everhart. Gnomeville Public Library accession GPL-048.",
+      "keywords": "Boners of the Dead Rook Everhart GPL-048 library book catalog cover"
+    },
+    {
+      "title": "Who Moved My Cheese? An Investigation into the 1987 Dairy Disappearance",
+      "url": "/catalog.html?record=GPL-010",
+      "type": "Websites",
+      "icon": "📖",
+      "description": "An investigation into the disappearance of 400 pounds of municipal cheddar. By Ollie Hoostin. Gnomeville Public Library accession GPL-010.",
+      "keywords": "Who Moved My Cheese? An Investigation into the 1987 Dairy Disappearance Ollie Hoostin GPL-010 library book catalog cover"
+    },
+    {
+      "title": "Goodnight Gnome",
+      "url": "/catalog.html?record=GPL-011",
+      "type": "Websites",
+      "icon": "📖",
+      "description": "A little gnome says goodnight to his garden, mushrooms, the moon, and the scratching beneath his floorboards. By Ollie Hoostin. Gnomeville Public Library accession GPL-011.",
+      "keywords": "Goodnight Gnome Ollie Hoostin GPL-011 library book catalog cover"
+    },
+    {
+      "title": "Death at Flip Flop Cove",
+      "url": "/catalog.html?record=GPL-027",
+      "type": "Websites",
+      "icon": "📖",
+      "description": "A vacationing sleuth discovers that paradise has a body count. By Piper Bonesley. Gnomeville Public Library accession GPL-027.",
+      "keywords": "Death at Flip Flop Cove Piper Bonesley GPL-027 library book catalog cover"
+    },
+    {
+      "title": "Aloha Means Alibi",
+      "url": "/catalog.html?record=GPL-030",
+      "type": "Websites",
+      "icon": "📖",
+      "description": "A destination wedding turns deadly when the bride’s least favorite guest washes ashore. By Piper Bonesley. Gnomeville Public Library accession GPL-030.",
+      "keywords": "Aloha Means Alibi Piper Bonesley GPL-030 library book catalog cover"
     }
   ]
 }
