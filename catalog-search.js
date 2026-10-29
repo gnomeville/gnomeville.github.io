@@ -1,6 +1,14 @@
-/* Gnomeville Public Library catalog v4. Canonical 47 holdings remain in catalog-collection.js. */
+/* Gnomeville Public Library catalog v5. Adds provisional accession GPL-048 without modifying existing 47 canonical records. */
 (()=>{'use strict';
 const records=window.GNOMEVILLE_CATALOG||[];
+// Provisional accession. Keep the original 47 records untouched until the master catalog is revised.
+if(!records.some(r=>r.id==='GPL-048'))records.push({
+ id:'GPL-048',kind:'Book',title:'Boners of the Dead',creator:'Rook Everhart',
+ description:'A work by Rook Everhart. Synopsis awaiting confirmation from the publisher.',
+ year:'',status:'Cataloged · Details pending',subjects:'Boners of the Dead Rook Everhart',
+ series:'',note:'Approved cover artwork recovered. Publication details and synopsis not yet confirmed.',
+ location:'Fiction · Classification pending'
+});
 const results=document.getElementById('catalog-results');if(!results)return;
 const query=document.getElementById('catalog-query'),kind=document.getElementById('catalog-type'),count=document.getElementById('catalog-count'),sort=document.getElementById('catalog-sort'),spot=document.getElementById('catalog-spotlight');
 const params=new URLSearchParams(location.search);
@@ -12,6 +20,7 @@ const featured=document.getElementById('catalog-featured'),track=document.getEle
 const lower=v=>String(v||'').toLocaleLowerCase();
 const node=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
 const knownCovers={
+ 'GPL-048':{src:'library-images/boners-of-the-dead-front.png',alt:'Approved front cover of Boners of the Dead by Rook Everhart'},
  'GPL-010':{src:'library-images/who-moved-my-cheese-front.png',alt:'Approved cover of Who Moved My Cheese? An Investigation into the 1987 Dairy Disappearance'},
  'GPL-011':{src:'library-images/goodnight-gnome-front.png',alt:'Approved cover of Goodnight Gnome'},
  'GPL-027':{src:'library-images/death-at-flip-flop-cove-front.png',alt:'Approved cover of Death at Flip Flop Cove'},
