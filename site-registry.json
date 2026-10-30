@@ -14,7 +14,8 @@
       "url": "/gazette/",
       "icon": "📰",
       "description": "Independent municipal news and investigations.",
-      "keywords": "gazette news newspaper"
+      "keywords": "gazette news newspaper",
+      "index": "/gazette/search-index.json"
     },
     {
       "name": "Wikignome",
