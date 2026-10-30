@@ -2,6 +2,14 @@
   "version": 1,
   "pages": [
     {
+      "title": "The Cryptogram · Daily and Unlimited Quote Decoder",
+      "url": "/gazette/games/gazette-cryptogram.html",
+      "type": "Websites",
+      "icon": "🔐",
+      "description": "Decode quotations in the Gazette's daily and unlimited cryptogram game, including music, theatre, wisdom and municipal humor.",
+      "keywords": "cryptogram quotes decode puzzle daily unlimited theatre music rock and roll Gazette"
+    },
+    {
       "title": "Municipal Connections · Daily Association Puzzle",
       "url": "/gazette/games/municipal-connections.html",
       "type": "Websites",
