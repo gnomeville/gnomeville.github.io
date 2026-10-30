@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "title": "GNOMBLE · Daily Word Puzzle",
+      "url": "/gazette/games/gnomble.html",
+      "type": "Websites",
+      "icon": "🟩",
+      "description": "Play the Gazette's daily five-letter word puzzle, see yesterday's solution, and track your recreational competence.",
+      "keywords": "gnomble games puzzles daily word five letters newspaper recreational distractions"
+    },
+    {
+      "title": "Comics & Puzzles · Gnomeville Gazette",
+      "url": "/gazette/sections/comics.html",
+      "type": "Websites",
+      "icon": "🧩",
+      "description": "The Gazette's games and puzzles department, featuring GNOMBLE and future diversions.",
+      "keywords": "games puzzles comics gnomble newspaper"
+    }
+  ]
+}
