@@ -2,6 +2,14 @@
   "version": 1,
   "pages": [
     {
+      "title": "Municipal Connections · Daily Association Puzzle",
+      "url": "/gazette/games/municipal-connections.html",
+      "type": "Websites",
+      "icon": "🧩",
+      "description": "Play the Gnomeville Gazette's daily four-by-four word association puzzle, with four categories and four mistakes permitted.",
+      "keywords": "municipal connections daily puzzle word association four groups categories games Gazette"
+    },
+    {
       "title": "GNOMBLE · Daily Word Puzzle",
       "url": "/gazette/games/gnomble.html",
       "type": "Websites",
@@ -14,7 +22,7 @@
       "url": "/gazette/sections/comics.html",
       "type": "Websites",
       "icon": "🧩",
-      "description": "The Gazette's games and puzzles department, featuring GNOMBLE and future diversions.",
+      "description": "The Gazette's games and puzzles department, featuring GNOMBLE and Municipal Connections.",
       "keywords": "games puzzles comics gnomble newspaper"
     }
   ]
