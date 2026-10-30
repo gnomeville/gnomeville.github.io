@@ -29,6 +29,7 @@ const colors=['#f2cf66','#a8c7a1','#a5c5d9','#c8a9d6'];
 const all=groups.flatMap(g=>g.words),storage=()=>{try{return JSON.parse(localStorage.getItem(key)||'null')}catch{return null}};
 const stored=storage();let state=stored&&Array.isArray(stored.solved)&&Array.isArray(stored.order)?stored:{solved:[],mistakes:0,order:all.slice(),finished:false,won:false};
 if(state.order.length!==16||new Set(state.order).size!==16||!state.order.every(w=>all.includes(w)))state={solved:[],mistakes:0,order:all.slice(),finished:false,won:false};
+if(!stored){for(let i=state.order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[state.order[i],state.order[j]]=[state.order[j],state.order[i]];}try{localStorage.setItem(key,JSON.stringify(state))}catch{}}
 let selected=[];
 function save(){try{localStorage.setItem(key,JSON.stringify(state))}catch{}}
 function getStats(){try{return JSON.parse(localStorage.getItem('municipal-connections-stats')||'{}')}catch{return {}}}
