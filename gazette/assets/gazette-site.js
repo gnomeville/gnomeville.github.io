@@ -12,32 +12,51 @@ const headlines=[
 // Seasonal Gazette masthead. Dates are evaluated in Gnomeville (Chicago) time.
 // Override for editorial preview: ?masthead=thanksgiving|christmas|halloween|standard|auto
 function seasonalMasthead(){
- const now=new Date(),parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'numeric',day:'numeric'}).formatToParts(now);
- const val=k=>Number(parts.find(p=>p.type===k).value),year=val('year'),month=val('month'),day=val('day');
- const firstNovember=new Date(Date.UTC(year,10,1)).getUTCDay();
- const thanksgiving=22+((4-firstNovember+7)%7);
- let season=month===10&&day>=1?'halloween':month===11&&day<=thanksgiving?'thanksgiving':(month===11&&day>thanksgiving||month===12)?'christmas':'standard';
- const manual=new URLSearchParams(location.search).get('masthead');
- if(['thanksgiving','christmas','halloween','standard'].includes(manual))season=manual;
- const assets={
-  thanksgiving:['/gazette/assets/thanksgiving-masthead.webp','/gazette/assets/thanksgiving-flourish.svg'],
-  halloween:['/gazette/assets/halloween-masthead.webp','/gazette/assets/halloween-flourish.webp'],
-  christmas:['/gazette/assets/christmas-masthead.webp','/gazette/assets/christmas-flourish.webp']
- };
+ const now=new Date();
+ const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'numeric',day:'numeric'}).formatToParts(now);
+ const value=k=>Number(parts.find(p=>p.type===k).value);
+ const year=value('year'),month=value('month'),day=value('day');
+ const novemberFirst=new Date(Date.UTC(year,10,1)).getUTCDay();
+ const thanksgiving=22+((4-novemberFirst+7)%7);
+ let season=month===10?'halloween':month===11&&day<=thanksgiving?'thanksgiving':(month===11&&day>thanksgiving||month===12)?'christmas':'standard';
+ const override=new URLSearchParams(location.search).get('masthead');
+ if(['standard','thanksgiving','halloween','christmas'].includes(override))season=override;
+ const wordmark='/gazette/assets/gazette-wordmark.png';
+ const thanksgivingArt='/gazette/assets/thanksgiving-background.webp';
+ const oldHalloween='/gazette/assets/halloween-masthead.webp';
+ const oldFlourish='/gazette/assets/halloween-flourish.webp';
+ const useImage=(url,callback,fallback)=>{const probe=new Image();probe.onload=callback;probe.onerror=fallback;probe.src=url;};
  document.querySelectorAll('.mast').forEach(mast=>{
   const art=mast.querySelector('.mast-art'),flourish=mast.querySelector('.flourish-art'),title=mast.querySelector('h1');
-  if(!art||!flourish)return;
-  const showStandard=()=>{art.style.display='none';flourish.style.display='none';if(title){title.classList.remove('visually-hidden');title.style.cssText='position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;white-space:normal!important;display:block!important;text-align:center;font:bold clamp(32px,7vw,75px) Georgia,serif;letter-spacing:-.04em;margin:18px 8px;color:#211a16';}};
-  if(!assets[season]){showStandard();return;}
-  const [main,lower]=assets[season],probe=new Image();
-  probe.onload=()=>{
-   art.style.cssText='display:block!important;width:100%;aspect-ratio:1536/390;background-image:url("'+main+'")!important;background-position:center;background-size:100% 100%;background-repeat:no-repeat';
-   art.setAttribute('aria-label','Gnomeville Gazette '+season+' illustrated masthead');
-   flourish.style.cssText='display:block!important;width:100%;aspect-ratio:1536/165;background-image:url("'+lower+'")!important;background-position:center;background-size:100% 100%;background-repeat:no-repeat';
+  if(!art)return;
+  const setArt=(images,description)=>{
+   art.style.setProperty('display','block','important');
+   art.style.setProperty('background-image',images,'important');
+   art.style.setProperty('background-position','center','important');
+   art.style.setProperty('background-size','100% 100%','important');
+   art.style.setProperty('background-repeat','no-repeat','important');
+   art.setAttribute('aria-label',description);
    if(title){title.classList.add('visually-hidden');title.removeAttribute('style');}
   };
-  probe.onerror=showStandard;
-  probe.src=main;
+  const hideFlourish=()=>{if(flourish)flourish.style.setProperty('display','none','important');};
+  const showPermanent=background=>{
+   hideFlourish();
+   useImage(wordmark,()=>setArt('url("'+wordmark+'"),'+background,'The Gnomeville Gazette permanent wordmark'),()=>{
+    art.style.setProperty('display','none','important');
+    if(title){title.classList.remove('visually-hidden');title.style.cssText='position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;white-space:normal!important;display:block!important;text-align:center;font:bold clamp(32px,7vw,75px) Georgia,serif;padding:20px 8px;color:#211a16';}
+   });
+  };
+  if(season==='thanksgiving'){
+   useImage(thanksgivingArt,()=>showPermanent('url("'+thanksgivingArt+'")'),()=>showPermanent('linear-gradient(115deg,#261813,#5e3926,#2c211d)'));
+  }else if(season==='halloween'){
+   useImage(oldHalloween,()=>{
+    setArt('url("'+oldHalloween+'")','The Gnomeville Gazette Halloween illustrated masthead');
+    if(flourish){flourish.style.setProperty('display','block','important');flourish.style.setProperty('background-image','url("'+oldFlourish+'")','important');}
+   },()=>showPermanent('linear-gradient(115deg,#261813,#5e3926,#2c211d)'));
+  }else{
+   // Christmas remains on the permanent masthead until a separate approved background is published.
+   showPermanent('linear-gradient(115deg,#261813,#5e3926,#2c211d)');
+  }
  });
 }
 
