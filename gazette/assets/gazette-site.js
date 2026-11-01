@@ -8,7 +8,41 @@ const headlines=[
  {text:'LIBRARY REQUESTS RETURN OF OVERDUE MANUSCRIPT',url:'/library.html'},
  {text:'SALTY PETE DECLINES COMMENT',url:'/gazette/index.html'}
 ];
+
+// Seasonal Gazette masthead. Dates are evaluated in Gnomeville (Chicago) time.
+// Override for editorial preview: ?masthead=thanksgiving|christmas|halloween|standard|auto
+function seasonalMasthead(){
+ const now=new Date(),parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'numeric',day:'numeric'}).formatToParts(now);
+ const val=k=>Number(parts.find(p=>p.type===k).value),year=val('year'),month=val('month'),day=val('day');
+ const firstNovember=new Date(Date.UTC(year,10,1)).getUTCDay();
+ const thanksgiving=22+((4-firstNovember+7)%7);
+ let season=month===10&&day>=1?'halloween':month===11&&day<=thanksgiving?'thanksgiving':(month===11&&day>thanksgiving||month===12)?'christmas':'standard';
+ const manual=new URLSearchParams(location.search).get('masthead');
+ if(['thanksgiving','christmas','halloween','standard'].includes(manual))season=manual;
+ const assets={
+  thanksgiving:['/gazette/assets/thanksgiving-masthead.webp','/gazette/assets/thanksgiving-flourish.svg'],
+  halloween:['/gazette/assets/halloween-masthead.webp','/gazette/assets/halloween-flourish.webp'],
+  christmas:['/gazette/assets/christmas-masthead.webp','/gazette/assets/christmas-flourish.webp']
+ };
+ document.querySelectorAll('.mast').forEach(mast=>{
+  const art=mast.querySelector('.mast-art'),flourish=mast.querySelector('.flourish-art'),title=mast.querySelector('h1');
+  if(!art||!flourish)return;
+  const showStandard=()=>{art.style.display='none';flourish.style.display='none';if(title){title.classList.remove('visually-hidden');title.style.cssText='position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;white-space:normal!important;display:block!important;text-align:center;font:bold clamp(32px,7vw,75px) Georgia,serif;letter-spacing:-.04em;margin:18px 8px;color:#211a16';}};
+  if(!assets[season]){showStandard();return;}
+  const [main,lower]=assets[season],probe=new Image();
+  probe.onload=()=>{
+   art.style.cssText='display:block!important;width:100%;aspect-ratio:1536/390;background-image:url("'+main+'")!important;background-position:center;background-size:100% 100%;background-repeat:no-repeat';
+   art.setAttribute('aria-label','Gnomeville Gazette '+season+' illustrated masthead');
+   flourish.style.cssText='display:block!important;width:100%;aspect-ratio:1536/165;background-image:url("'+lower+'")!important;background-position:center;background-size:100% 100%;background-repeat:no-repeat';
+   if(title){title.classList.add('visually-hidden');title.removeAttribute('style');}
+  };
+  probe.onerror=showStandard;
+  probe.src=main;
+ });
+}
+
 function ready(){
+ seasonalMasthead();
  document.querySelectorAll('.mast .meta').forEach(function(meta){
   const spans=meta.querySelectorAll('span');if(spans[0])spans[0].textContent='GNOMEVILLE, IL';
   const target=meta.querySelector('#edition')||spans[1];if(target){target.textContent=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(new Date());target.setAttribute('aria-label','Current date in Gnomeville');}
