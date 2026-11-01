@@ -1,6 +1,6 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gnomeville Test Garden v1.7.0</title>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gnomeville Test Garden v1.7.1</title>
 <style>*{box-sizing:border-box}body{margin:0;background:#191b28;color:#f7e7df;font:16px system-ui}main{max-width:760px;margin:auto;padding:6px}header{display:none}h1{font-size:21px;margin:8px 0}button{font:inherit;font-weight:650;border:1px solid #bb8aaf;border-radius:12px;background:#403049;color:#fff;padding:11px;min-height:46px}button:focus-visible{outline:3px solid #ffe0a0}.active{background:#e7a6c5;color:#241b2c}#garden{display:block;width:100%;height:100%;touch-action:none;background:#84b879;border:0;border-radius:14px}#tools{position:absolute;bottom:10px;left:8px;right:8px;background:transparent;border-radius:14px;padding:0;margin:0;pointer-events:none}#tools button,#inventory,#actions{pointer-events:auto}#viewport{position:relative;height:min(76dvh,850px);min-height:430px;border:2px solid #aa86b5;border-radius:15px;overflow:hidden;background:#83b775}#inventory.open{background:#292a3deE;border-radius:12px;max-height:112px;overflow-x:auto;overflow-y:hidden;flex-wrap:nowrap!important}#inventory button{flex:0 0 auto;min-width:46px;padding:8px;font-size:24px}#actions.open{background:#292a3dee;border-radius:12px;max-height:55px;overflow:auto;flex-wrap:nowrap!important}#actions button{white-space:nowrap;font-size:13px;padding:7px}#status{display:none}#paintPalette{display:none;gap:5px;overflow-x:auto;padding:7px 0;background:#292a3dee;border-radius:12px;pointer-events:auto}#paintPalette.open{display:flex}#paintPalette button{flex:0 0 auto;font-size:12px;padding:7px;min-height:43px;white-space:nowrap}#paintPalette button.active{background:#e7a6c5;color:#241b2c}#cam{position:absolute;top:10px;right:10px;z-index:2}#toggle{font-size:22px;min-width:52px}#tools #toggle{background:#865374}#inventory button.active{background:#e7a6c5}#inventory{display:none;gap:6px;flex-wrap:wrap;padding:8px 0}#inventory.open{display:flex}#actions{display:none;gap:6px;flex-wrap:wrap;border-top:1px solid #6e5c78;padding-top:8px}#actions.open{display:flex}#status{color:#ffe0a1;min-height:44px;margin:8px 0 0}small{color:#c9c3d5}#cam{display:flex;gap:5px;align-items:center}#cam button{padding:8px 12px}#toggle{background:#865374}p{line-height:1.4}#cottageColorsPanel{display:none;position:absolute;z-index:5;left:8px;right:8px;bottom:90px;max-height:65%;overflow:auto;padding:14px;border:2px solid #b68eb7;border-radius:16px;background:#29283cf5;color:#fff;box-shadow:0 8px 25px #151322aa}#cottageColorsPanel.open{display:block}#cottageColorsPanel .colorRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}#cottageColorsPanel label{display:flex;align-items:center;gap:8px}#cottageColorsPanel input[type=color]{width:55px;height:45px}#cottageColorsPanel input[type=range]{max-width:170px}#cottageColorsPanel button{font-size:14px;padding:8px}#closeCottageColors{float:right}.colorNote{font-size:12px;color:#e6d4e6}#customizeCottage{pointer-events:auto;background:#865374}</style>
-<main><header><h1>🍄 Test Garden <small>v1.1.0</small></h1><div id="cam"><button id="minus" aria-label="Zoom out">−</button><button id="plus" aria-label="Zoom in">+</button></div></header><div id="viewport"><canvas id="garden" width="760" height="800" aria-label="Interactive isometric garden"></canvas><div id="cam"><button id="minus" aria-label="Zoom out">−</button><button id="plus" aria-label="Zoom in">+</button></div><section id="tools"><button id="paintToggle" aria-label="Paint ground" title="Paint ground">🎨</button><button id="toggle" aria-expanded="false" aria-label="Toggle decorating inventory" title="Inventory">🧰</button><div id="paintPalette"><button data-paint="meadow">🌱 Meadow</button><button data-paint="forest">🌲 Forest</button><button data-paint="dirt">🟫 Dirt</button><button data-paint="stone">🪨 Cobble</button></div><div id="inventory"><button data-kind="bench" aria-label="Bench" title="Bench">🪑</button><button data-kind="flowers" aria-label="Flowers" title="Flowers">🌸</button><button data-kind="tree" aria-label="Tree" title="Tree">🌳</button><button data-kind="lamp" aria-label="Lamp" title="Lamp">💡</button><button data-kind="skull" aria-label="Skull" title="Skull">💀</button><button data-kind="mushroom" aria-label="Mushroom" title="Mushroom">🍄</button><button data-kind="pond" aria-label="Pond" title="Pond">💧</button><button data-kind="picnic" aria-label="Picnic table" title="Picnic table">🧺</button><button data-kind="pumpkin" aria-label="Pumpkin" title="Pumpkin">🎃</button><button data-kind="hedge" aria-label="Hedge" title="Hedge">🌿</button><button data-kind="lantern" aria-label="Lantern" title="Lantern">🏮</button></div><div id="actions"><button id="remove">📦 Remove selected</button><button id="undo">↶ Undo</button><button id="reset">↻ Reset garden</button></div><p id="status" role="status">Explore mode. Open inventory to decorate. Pinch to zoom; drag empty ground to pan.</p></section></div><p><strong id="build">🍄 Test Garden v1.7.0</strong><br><small>Cottage color customization: tap 🏡 or tap the cottage in explore mode. Roof and siding colors are saved separately from the garden layout. Existing garden objects and terrain saves are unchanged. Meadow grass now loads the illustrated PNG at a game-scaled repeat size; forest, dirt and cobblestone continue using SVG artwork, with generated fallback textures if an asset fails. Existing terrain paint and saves are preserved. Terrain boundaries are intentionally crisp until proper transition tiles are added. Existing paint and decorations are preserved. Ground painting experiment: tap 🎨 to paint meadow, forest grass, dirt paths or cobblestone. Drag across tiles, including underneath furniture and trees. Meadow erases paint. Painting saves in this browser. Ground study: softened tile seams, richer grass variation, tiny clover-like flecks and subtle patches. Terrain stays underneath every decoration, including the cottage. Garden illustration upgrade: trees, hedges, flowers and skulls load from four transparent assets, with original vector fallbacks. Picnic table sprite upgrade: floral picnic table loads from assets/gnomeville-picnic-table.png, with vector fallback. Existing picnic tables, dragging and saves are preserved. Streetlamp proportion fix: the illustrated sprite now keeps its natural aspect ratio at a consistent height, rather than being stretched into a fixed narrow box. Original lamp remains as fallback. Existing decorations and saves are preserved. Cottage loads from assets/gnomeville-cottage.png. Background remains decorative. Cottage 3×3 tiles, pond 2×2, picnic table 2×1. The little SCALE figure is a temporary non-canon size reference. Existing decorations are preserved. With inventory open: drag a decoration immediately; tap multiple objects to select a group, then drag one to move them together. Close inventory to lock objects. Decorations save in this browser.</small></p></main>
+<main><header><h1>🍄 Test Garden <small>v1.1.0</small></h1><div id="cam"><button id="minus" aria-label="Zoom out">−</button><button id="plus" aria-label="Zoom in">+</button></div></header><div id="viewport"><canvas id="garden" width="760" height="800" aria-label="Interactive isometric garden"></canvas><div id="cam"><button id="minus" aria-label="Zoom out">−</button><button id="plus" aria-label="Zoom in">+</button></div><section id="tools"><button id="paintToggle" aria-label="Paint ground" title="Paint ground">🎨</button><button id="toggle" aria-expanded="false" aria-label="Toggle decorating inventory" title="Inventory">🧰</button><div id="paintPalette"><button data-paint="meadow">🌱 Meadow</button><button data-paint="forest">🌲 Forest</button><button data-paint="dirt">🟫 Dirt</button><button data-paint="stone">🪨 Cobble</button></div><div id="inventory"><button data-kind="bench" aria-label="Bench" title="Bench">🪑</button><button data-kind="flowers" aria-label="Flowers" title="Flowers">🌸</button><button data-kind="tree" aria-label="Tree" title="Tree">🌳</button><button data-kind="lamp" aria-label="Lamp" title="Lamp">💡</button><button data-kind="skull" aria-label="Skull" title="Skull">💀</button><button data-kind="mushroom" aria-label="Mushroom" title="Mushroom">🍄</button><button data-kind="pond" aria-label="Pond" title="Pond">💧</button><button data-kind="picnic" aria-label="Picnic table" title="Picnic table">🧺</button><button data-kind="pumpkin" aria-label="Pumpkin" title="Pumpkin">🎃</button><button data-kind="hedge" aria-label="Hedge" title="Hedge">🌿</button><button data-kind="lantern" aria-label="Lantern" title="Lantern">🏮</button></div><div id="actions"><button id="remove">📦 Remove selected</button><button id="undo">↶ Undo</button><button id="reset">↻ Reset garden</button></div><p id="status" role="status">Explore mode. Open inventory to decorate. Pinch to zoom; drag empty ground to pan.</p></section></div><p><strong id="build">🍄 Test Garden v1.7.1</strong><br><small>Cottage color customization: tap 🏡 or tap the cottage in explore mode. Roof and siding colors are saved separately from the garden layout. Existing garden objects and terrain saves are unchanged. Meadow grass now loads the illustrated PNG at a game-scaled repeat size; forest, dirt and cobblestone continue using SVG artwork, with generated fallback textures if an asset fails. Existing terrain paint and saves are preserved. Terrain boundaries are intentionally crisp until proper transition tiles are added. Existing paint and decorations are preserved. Ground painting experiment: tap 🎨 to paint meadow, forest grass, dirt paths or cobblestone. Drag across tiles, including underneath furniture and trees. Meadow erases paint. Painting saves in this browser. Ground study: softened tile seams, richer grass variation, tiny clover-like flecks and subtle patches. Terrain stays underneath every decoration, including the cottage. Garden illustration upgrade: trees, hedges, flowers and skulls load from four transparent assets, with original vector fallbacks. Picnic table sprite upgrade: floral picnic table loads from assets/gnomeville-picnic-table.png, with vector fallback. Existing picnic tables, dragging and saves are preserved. Streetlamp proportion fix: the illustrated sprite now keeps its natural aspect ratio at a consistent height, rather than being stretched into a fixed narrow box. Original lamp remains as fallback. Existing decorations and saves are preserved. Cottage loads from assets/gnomeville-cottage.png. Background remains decorative. Cottage 3×3 tiles, pond 2×2, picnic table 2×1. The little SCALE figure is a temporary non-canon size reference. Existing decorations are preserved. With inventory open: drag a decoration immediately; tap multiple objects to select a group, then drag one to move them together. Close inventory to lock objects. Decorations save in this browser.</small></p></main>
 <script>
 (()=>{'use strict';
 const c=document.querySelector('#garden'),g=c.getContext('2d'),status=document.querySelector('#status'),inventory=document.querySelector('#inventory'),actions=document.querySelector('#actions'),toggle=document.querySelector('#toggle'),items=[...document.querySelectorAll('[data-kind]')];
@@ -42,34 +42,67 @@ const COTTAGE_COLORS_KEY='gnomeville-garden-v04-cottage-colors';
 let cottageColors={roof:'#6e3197',siding:'#e9d4a3',strength:92,enabled:false};
 try{Object.assign(cottageColors,JSON.parse(localStorage.getItem(COTTAGE_COLORS_KEY)||'{}'))}catch{}
 const cottageMasks={},coloredCottage=document.createElement('canvas');coloredCottage.width=768;coloredCottage.height=716;
-let coloredReady=false;
+const cottageCtx=coloredCottage.getContext('2d',{willReadFrequently:true});
+let coloredReady=false,baseCottagePixels=null,recolorQueued=false;
+function prepareCottageBase(){
+ if(!cottageSpriteReady)return;
+ cottageCtx.clearRect(0,0,768,716);
+ cottageCtx.drawImage(cottageSprite,0,0,768,716);
+ baseCottagePixels=cottageCtx.getImageData(0,0,768,716);
+ scheduleCottageRecolor();
+}
+function scheduleCottageRecolor(){
+ if(recolorQueued)return;
+ recolorQueued=true;
+ requestAnimationFrame(()=>{recolorQueued=false;recolorCottage()});
+}
 function recolorCottage(){
- if(!cottageSpriteReady||!cottageMasks.roof||!cottageMasks.siding)return;
- const cc=coloredCottage.getContext('2d',{willReadFrequently:true});cc.clearRect(0,0,768,716);
- cc.drawImage(cottageSprite,0,0,768,716);
- if(!cottageColors.enabled){coloredReady=true;draw();return}
- const image=cc.getImageData(0,0,768,716),d=image.data,st=cottageColors.strength/100;
- for(const part of ['siding','roof']){
-  const m=cottageMasks[part],hex=cottageColors[part],t=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
-  for(let i=0;i<d.length;i+=4){const a=m[i+3]/255*st;if(!a||!d[i+3])continue;
-   const lum=(d[i]*.27+d[i+1]*.60+d[i+2]*.13)/255,shade=.36+lum*.95;
-   for(let j=0;j<3;j++)d[i+j]=d[i+j]*(1-a)+Math.min(255,t[j]*shade)*a;
+ if(!baseCottagePixels||!cottageMasks.roof||!cottageMasks.siding)return;
+ const image=new ImageData(new Uint8ClampedArray(baseCottagePixels.data),768,716);
+ const d=image.data,original=baseCottagePixels.data;
+ if(cottageColors.enabled){
+  const strength=Math.max(0,Math.min(1,cottageColors.strength/100));
+  for(const part of ['siding','roof']){
+   const mask=cottageMasks[part],hex=cottageColors[part];
+   const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
+   const dark=Math.max(rgb[0],rgb[1],rgb[2])<75;
+   for(let k=0;k<mask.indices.length;k++){
+    const i=mask.indices[k],a=mask.alpha[k]*strength;
+    if(!a||!original[i+3])continue;
+    const lum=(original[i]*.27+original[i+1]*.60+original[i+2]*.13)/255;
+    // Preserve shingle ridges and masonry texture even with near-black colors.
+    const shade=.42+lum*.85;
+    for(let j=0;j<3;j++){
+     const target=Math.min(255,rgb[j]*shade+(dark?lum*36:lum*9));
+     d[i+j]=d[i+j]*(1-a)+target*a;
+    }
+   }
   }
  }
- cc.putImageData(image,0,0);coloredReady=true;draw();
+ cottageCtx.putImageData(image,0,0);
+ coloredReady=true;draw();
 }
 for(const part of ['roof','siding']){
- const im=new Image();im.onload=()=>{const cv=document.createElement('canvas');cv.width=768;cv.height=716;const ct=cv.getContext('2d',{willReadFrequently:true});ct.drawImage(im,0,0);cottageMasks[part]=ct.getImageData(0,0,768,716).data;recolorCottage()};
+ const im=new Image();
+ im.onload=()=>{
+  const cv=document.createElement('canvas');cv.width=768;cv.height=716;
+  const ct=cv.getContext('2d',{willReadFrequently:true});ct.drawImage(im,0,0);
+  const data=ct.getImageData(0,0,768,716).data,indices=[],alpha=[];
+  for(let i=0;i<data.length;i+=4)if(data[i+3]>0){indices.push(i);alpha.push(data[i+3]/255)}
+  cottageMasks[part]={indices,alpha};
+  scheduleCottageRecolor();
+ };
  im.onerror=()=>say('Cottage '+part+' mask unavailable; original cottage retained.');
  im.src='color-lab/assets/'+part+'-mask.png';
 }
-cottageSprite.addEventListener('load',recolorCottage);
+cottageSprite.addEventListener('load',prepareCottageBase);
+if(cottageSpriteReady)prepareCottageBase();
 const colorPanel=document.createElement('section');colorPanel.id='cottageColorsPanel';colorPanel.setAttribute('aria-label','Cottage customization');
 colorPanel.innerHTML='<strong>🏡 Cottage colors</strong><button id="closeCottageColors" aria-label="Close cottage colors">✕</button><div class="colorRow"><label>Roof <input type="color" id="houseRoof"></label><label>Siding <input type="color" id="houseSiding"></label></div><div class="colorRow"><button data-house-part="roof" data-house-color="#ff1493">💗 Pink roof</button><button data-house-part="roof" data-house-color="#164d5b">🦚 Teal roof</button><button data-house-part="siding" data-house-color="#242027">🖤 Black siding</button><button data-house-part="siding" data-house-color="#f6d4c3">🌸 Blush siding</button></div><label>Color strength <input type="range" min="0" max="100" id="houseStrength"></label><button id="houseOriginal">Original cottage</button><p class="colorNote">Colors save on this device. This test garden currently has one cottage.</p>';
 document.querySelector('#viewport').appendChild(colorPanel);
 const colorButton=document.createElement('button');colorButton.id='customizeCottage';colorButton.textContent='🏡';colorButton.title='Customize cottage';colorButton.setAttribute('aria-label','Customize cottage');document.querySelector('#tools').insertBefore(colorButton,document.querySelector('#paintToggle'));
 function openCottageColors(){colorPanel.classList.add('open');document.querySelector('#houseRoof').value=cottageColors.roof;document.querySelector('#houseSiding').value=cottageColors.siding;document.querySelector('#houseStrength').value=cottageColors.strength;}
-function commitCottageColors(){cottageColors.enabled=true;try{localStorage.setItem(COTTAGE_COLORS_KEY,JSON.stringify(cottageColors))}catch{}recolorCottage()}
+function commitCottageColors(){cottageColors.enabled=true;try{localStorage.setItem(COTTAGE_COLORS_KEY,JSON.stringify(cottageColors))}catch{}scheduleCottageRecolor()}
 colorButton.onclick=openCottageColors;
 document.querySelector('#closeCottageColors').onclick=()=>colorPanel.classList.remove('open');
 for(const part of ['roof','siding'])document.querySelector('#house'+part[0].toUpperCase()+part.slice(1)).oninput=e=>{cottageColors[part]=e.target.value;commitCottageColors()};
