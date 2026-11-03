@@ -29,7 +29,16 @@ const fmt=new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-d
 function dateParts(date){const p=fmt.formatToParts(date);return Object.fromEntries(p.filter(x=>x.type!=='literal').map(x=>[x.type,x.value]));}
 function dateKey(date){const p=dateParts(date);return p.year+'-'+p.month+'-'+p.day;}
 function dayNumber(key){return Math.floor((Date.parse(key+'T12:00:00Z')-Date.parse(START+'T12:00:00Z'))/86400000);}
-function answer(key){const mmdd=key.slice(5);return specials[mmdd]||words[((dayNumber(key)%words.length)+words.length)%words.length];}
+const reservedAnswers=new Set(Object.values(specials));
+const regularAnswers=words.filter((word,i)=>!reservedAnswers.has(word)&&words.indexOf(word)===i);
+function answer(key){
+  const mmdd=key.slice(5),n=dayNumber(key);
+  if(specials[mmdd])return specials[mmdd];
+  // Preserve all already-published puzzles through November 2, 2026.
+  if(n<4)return words[((n%words.length)+words.length)%words.length];
+  // Skip holiday-only words without consuming a regular day's slot.
+  return regularAnswers[(((n-1)%regularAnswers.length)+regularAnswers.length)%regularAnswers.length];
+}
 const today=dateKey(new Date()),index=dayNumber(today),target=answer(today);
 const yesterday=new Date(Date.parse(today+'T12:00:00Z')-86400000),yKey=yesterday.toISOString().slice(0,10);
 document.getElementById('dateLine').textContent=new Intl.DateTimeFormat('en-US',{timeZone:TZ,weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(new Date())+'  ·  PUZZLE #'+String(Math.max(1,index+1)).padStart(4,'0');
