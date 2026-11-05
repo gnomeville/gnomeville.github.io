@@ -74,6 +74,13 @@
       "icon": "🚓",
       "description": "Municipal law enforcement.",
       "keywords": "police incidents"
+    },
+    {
+      "name": "OnlyFlans",
+      "url": "/onlyflans/",
+      "icon": "🍮",
+      "description": "Exclusive dessert glamour from Rook. Fictional memberships, very real custard.",
+      "keywords": "onlyflans rook flan cheesecake desserts subscriptions parody"
     }
   ]
 }
