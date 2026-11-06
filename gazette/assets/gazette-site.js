@@ -62,9 +62,9 @@ function seasonalMasthead(){
 
 const gazetteSearchCache={pages:null};
 
-function gazetteOnlyUrl(value){
+function gazetteOnlyUrl(value,base=location.href){
  try{
-  const url=new URL(value,location.origin);
+  const url=new URL(value,new URL(base,location.origin));
   const path=url.pathname.replace(/\/{2,}/g,'/');
   if(url.origin!==location.origin||!path.startsWith('/gazette/'))return null;
   if(!path.endsWith('.html')&&!path.endsWith('/'))return null;
@@ -96,11 +96,12 @@ async function loadGazetteSearchPages(){
  if(responses[0].status==='fulfilled'&&Array.isArray(responses[0].value.pages)){
   responses[0].value.pages.forEach(addRecord);
  }
- responses.slice(1).forEach(result=>{
+ const discoveryBases=['/gazette/sections/archives.html','/gazette/index.html'];
+ responses.slice(1).forEach((result,resultIndex)=>{
   if(result.status!=='fulfilled')return;
   const doc=new DOMParser().parseFromString(result.value,'text/html');
   doc.querySelectorAll('a[href]').forEach(link=>{
-   const url=gazetteOnlyUrl(link.getAttribute('href'));
+   const url=gazetteOnlyUrl(link.getAttribute('href'),discoveryBases[resultIndex]);
    if(url)addRecord({title:link.textContent.replace(/\s+/g,' ').replace(/\s*[→»]+\s*$/,'').trim(),url});
   });
  });
