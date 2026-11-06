@@ -60,8 +60,159 @@ function seasonalMasthead(){
  });
 }
 
+const gazetteSearchCache={pages:null};
+
+function gazetteOnlyUrl(value){
+ try{
+  const url=new URL(value,location.origin);
+  const path=url.pathname.replace(/\/{2,}/g,'/');
+  if(url.origin!==location.origin||!path.startsWith('/gazette/'))return null;
+  if(!path.endsWith('.html')&&!path.endsWith('/'))return null;
+  return path+url.search+url.hash;
+ }catch(_error){return null;}
+}
+
+async function loadGazetteSearchPages(){
+ if(gazetteSearchCache.pages)return gazetteSearchCache.pages;
+ const records=new Map();
+ const addRecord=item=>{
+  const url=gazetteOnlyUrl(item.url||'');
+  if(!url)return;
+  const key=url.split(/[?#]/)[0];
+  const existing=records.get(key)||{};
+  records.set(key,{
+   title:item.title||existing.title||key.split('/').pop().replace(/[-_]/g,' '),
+   url:key,
+   description:item.description||existing.description||'',
+   keywords:item.keywords||existing.keywords||'',
+   text:item.text||existing.text||''
+  });
+ };
+ const responses=await Promise.allSettled([
+  fetch('/gazette/search-index.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Search index unavailable');return r.json();}),
+  fetch('/gazette/sections/archives.html',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Archive unavailable');return r.text();}),
+  fetch('/gazette/index.html',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Front page unavailable');return r.text();})
+ ]);
+ if(responses[0].status==='fulfilled'&&Array.isArray(responses[0].value.pages)){
+  responses[0].value.pages.forEach(addRecord);
+ }
+ responses.slice(1).forEach(result=>{
+  if(result.status!=='fulfilled')return;
+  const doc=new DOMParser().parseFromString(result.value,'text/html');
+  doc.querySelectorAll('a[href]').forEach(link=>{
+   const url=gazetteOnlyUrl(link.getAttribute('href'));
+   if(url)addRecord({title:link.textContent.replace(/\s+/g,' ').replace(/\s*[→»]+\s*$/,'').trim(),url});
+  });
+ });
+ addRecord({title:'The Gnomeville Gazette',url:'/gazette/index.html',description:'The Gazette front page and current headlines.'});
+ addRecord({title:'Gazette Archives',url:'/gazette/sections/archives.html',description:'Past Gazette reporting and preserved coverage.'});
+ const pages=[...records.values()];
+ const details=await Promise.allSettled(pages.map(page=>fetch(page.url,{cache:'no-store'}).then(r=>r.ok?r.text():'').then(html=>{
+  if(!html)return page;
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  const title=(doc.querySelector('main h1, main h2, article h1, article h2')?.textContent||doc.title||page.title).replace(/\s+/g,' ').trim();
+  const text=(doc.querySelector('main')?.textContent||'').replace(/\s+/g,' ').trim();
+  const description=doc.querySelector('meta[name="description"]')?.content||page.description;
+  return {...page,title,description,text};
+ })));
+ gazetteSearchCache.pages=details.map((result,index)=>result.status==='fulfilled'?result.value:pages[index]);
+ return gazetteSearchCache.pages;
+}
+
+function renderGazetteSearchResults(query,pages){
+ let panel=document.getElementById('gazette-search-results');
+ if(!panel){
+  panel=document.createElement('section');
+  panel.id='gazette-search-results';
+  panel.className='gazette-search-results';
+  panel.setAttribute('aria-live','polite');
+  const main=document.querySelector('main');
+  if(main)main.prepend(panel);
+ }
+ panel.replaceChildren();
+ const heading=document.createElement('h2');
+ heading.textContent='Gazette Search';
+ panel.append(heading);
+ const terms=query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+ const ranked=pages.map(page=>{
+  const title=(page.title||'').toLocaleLowerCase();
+  const haystack=[page.title,page.description,page.keywords,page.text].join(' ').toLocaleLowerCase();
+  if(!terms.every(term=>haystack.includes(term)))return null;
+  let score=terms.reduce((total,term)=>total+(title.startsWith(term)?8:title.includes(term)?4:1),0);
+  return {page,score};
+ }).filter(Boolean).sort((a,b)=>b.score-a.score||a.page.title.localeCompare(b.page.title));
+ const summary=document.createElement('p');
+ summary.className='gazette-search-summary';
+ summary.textContent=ranked.length?ranked.length+' Gazette result'+(ranked.length===1?'':'s')+' for “'+query+'”.':'No Gazette results found for “'+query+'”.';
+ panel.append(summary);
+ if(ranked.length){
+  const list=document.createElement('div');
+  list.className='gazette-search-list';
+  ranked.forEach(({page})=>{
+   const article=document.createElement('article');
+   const link=document.createElement('a');
+   link.href=page.url;
+   link.textContent=page.title;
+   article.append(link);
+   if(page.description){
+    const description=document.createElement('p');
+    description.textContent=page.description;
+    article.append(description);
+   }
+   list.append(article);
+  });
+  panel.append(list);
+ }
+ const close=document.createElement('button');
+ close.type='button';
+ close.className='gazette-search-close';
+ close.textContent='Close search results';
+ close.addEventListener('click',()=>{panel.remove();const input=document.querySelector('form.search input');if(input)input.focus();});
+ panel.append(close);
+ panel.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function installGazetteSearch(){
+ document.querySelectorAll('form.search').forEach(form=>{
+  if(form.dataset.gazetteSearchReady)return;
+  form.dataset.gazetteSearchReady='true';
+  const input=form.querySelector('input');
+  form.addEventListener('submit',async event=>{
+   event.preventDefault();
+   const query=(input?.value||'').trim();
+   if(!query){if(input)input.focus();return;}
+   let panel=document.getElementById('gazette-search-results');
+   if(!panel){
+    panel=document.createElement('section');
+    panel.id='gazette-search-results';
+    panel.className='gazette-search-results';
+    panel.setAttribute('aria-live','polite');
+    document.querySelector('main')?.prepend(panel);
+   }
+   panel.innerHTML='<h2>Gazette Search</h2><p>Searching Gazette pages…</p>';
+   try{
+    const pages=await loadGazetteSearchPages();
+    renderGazetteSearchResults(query,pages);
+    const url=new URL(location.href);
+    url.searchParams.set('q',query);
+    history.replaceState(null,'',url);
+   }catch(_error){
+    panel.innerHTML='<h2>Gazette Search</h2><p>Search is temporarily unavailable. Please try again.</p>';
+   }
+  });
+ });
+ const query=new URLSearchParams(location.search).get('q');
+ const form=document.querySelector('form.search');
+ const input=form?.querySelector('input');
+ if(query&&form&&input){
+  input.value=query;
+  form.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));
+ }
+}
+
 function ready(){
  seasonalMasthead();
+ installGazetteSearch();
  document.querySelectorAll('.mast .meta').forEach(function(meta){
   const spans=meta.querySelectorAll('span');if(spans[0])spans[0].textContent='GNOMEVILLE, IL';
   const target=meta.querySelector('#edition')||spans[1];if(target){target.textContent=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(new Date());target.setAttribute('aria-label','Current date in Gnomeville');}
