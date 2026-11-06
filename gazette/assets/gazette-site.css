@@ -27,3 +27,4 @@ footer .community-links{padding:12px 4px 2px;font:13px Arial,sans-serif}footer .
 .gazette-search-list article>a:hover,.gazette-search-list article>a:focus{text-decoration:underline}
 .gazette-search-list article p{margin:6px 0 0;font:15px/1.5 Arial,sans-serif;color:#5f5148}
 .gazette-search-close{margin-top:16px;border:0;background:#801e32;color:#fff;padding:10px 14px;font:bold 13px Arial,sans-serif}
+.gazette-search-close:focus-visible{outline:3px solid #bd954c;outline-offset:3px}
