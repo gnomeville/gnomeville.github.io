@@ -36,3 +36,10 @@ Comic dialogue established: BD protests “THAT IS NOT HOW DEMOCRACY WORKS!”; 
 
 ## Continuity and publication boundaries
 All above are creator-approved character/story canon, not proof of published pages or enacted town legislation. Keep proposed mayoral policies distinct from actual law, the mayoral candidacy distinct from election victory, the call for unionization distinct from a formed union, and pending pajamas distinct from delivered clothing. Preserve previously approved lore without erasing existing stories.
+
+## Fort Quackers / Navy Squeals | Creator-approved concept, 2026-11-13
+The **Department of Homeland Cuddle Security**, **Fort Quackers: The Cuddle Citadel**, and its elite seal-based **Navy Squeals** are approved Gnomeville worldbuilding. Fortress: pillow castle, blanket ramparts, rubber duck moat, kindness-operated drawbridge, nap room; protection via tactical weighted blankets. Security alerts: Code Fluff (sad duck/cuddles), Code Dino (pajama emergency; pajamas still pending), Code Honk (BD transfers blame), Code Nap (no disturbances). Quackers can override any restriction to welcome someone needing a hug.
+
+**Permanent unrestricted access:** Derpy **with Birthday Mouse**; Honey Baby **with Brittney Mouse**; and Liza Joy. **Never separate the mice from their besties.** Liza and Quackers becoming best friends is an anticipated relationship, not a completed story event. Brittney's earmuffs are permitted. Proposed appointments such as Liza as Director of Bestie Relations or Honey Baby as Chief of Gentle Hugs are **ideas**, not confirmed posts.
+
+**Website:** https://gnomeville.github.io/fort-quackers.html . The playful security console is simulated; no real security services are provided.
