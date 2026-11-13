@@ -3,3 +3,11 @@
 .entry .checkpoint{background:rgba(253,248,237,.55);-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px);border-color:#c4a46e;box-shadow:0 12px 40px #07152870}
 .entry .checkpoint .eyebrow{color:#755c30}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.entry .checkpoint{background:rgba(253,248,237,.62)}}
+
+/* Compact two-column checkpoint choices, including narrow phones */
+.entry .checkpoint{padding:clamp(18px,3vw,28px)}
+.entry .checkpoint .choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.entry .checkpoint .choices button{min-width:0;min-height:56px;padding:10px 7px;font-size:clamp(.76rem,2.7vw,.95rem);line-height:1.25;text-align:center}
+.entry .checkpoint>p{margin-bottom:12px}
+.entry .checkpoint .tiny:empty{display:none}
+@media(max-width:470px){.entry .checkpoint .choices{grid-template-columns:repeat(2,minmax(0,1fr))}}
