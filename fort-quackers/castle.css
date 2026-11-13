@@ -118,3 +118,22 @@
 .cinematic-story-battlements{background:linear-gradient(to bottom,#ede2cd,var(--cream) 200px)}
 @media(max-width:750px){.cinematic-room{min-height:calc(100svh - 90px)}.cinematic-overlay{padding:35px 20px 65px}.cinematic-room h1{font-size:clamp(2.7rem,11vw,4.7rem)}}
 @media(prefers-reduced-motion:reduce){.cinematic-room .cinematic-eyebrow,.cinematic-room h1,.cinematic-room .cinematic-intro,.cinematic-room .cinematic-scroll{animation:none}}
+
+/* The wandering keyhole: a single subtle discovery per browser session */
+.wandering-keyhole{position:absolute;z-index:5;top:27%;right:clamp(28px,11%,160px);width:46px;height:65px;padding:9px;background:transparent;border:0;filter:drop-shadow(0 0 5px #ffe3a9) drop-shadow(0 0 12px #d7a3ff);animation:keyhole-glimmer 3.5s ease-in-out infinite;cursor:pointer}
+.wandering-keyhole:hover,.wandering-keyhole:focus-visible{background:transparent;filter:drop-shadow(0 0 10px #fff1bf) drop-shadow(0 0 18px #ddafff)}
+.wandering-keyhole svg{display:block;width:100%;height:100%}
+@keyframes keyhole-glimmer{0%,100%{opacity:.68}50%{opacity:1}}
+.keyhole-dialog{position:fixed;inset:0;margin:auto;max-width:min(92vw,700px);width:100%;max-height:88dvh;overflow:auto;padding:0;border:2px solid #d6b77d;border-radius:14px;color:#fff5e5;background:#253452;box-shadow:0 24px 85px #0b1225a8}
+.keyhole-dialog::backdrop{background:rgba(12,16,29,.78);backdrop-filter:blur(5px)}
+.keyhole-scene{min-height:340px;padding:clamp(30px,7vw,65px) clamp(22px,5vw,50px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 50% 25%,#56648b,#263450 70%);text-shadow:0 2px 9px #111a30}
+.keyhole-dialog[data-scene="chamber"] .keyhole-scene{background:radial-gradient(ellipse at 60% 15%,#807399,#3b4169 53%,#232c49)}
+.keyhole-dialog[data-scene="icecream"] .keyhole-scene{background:radial-gradient(ellipse at 45% 25%,#876079,#542e56 57%,#292444)}
+.keyhole-label{color:#f1d39a;font-size:.72rem;letter-spacing:.25em;font-weight:800}
+.keyhole-scene h2{font-size:clamp(2rem,6vw,3.3rem);margin:20px 0}
+.keyhole-scene p{max-width:520px;font:clamp(1.1rem,2.4vw,1.4rem)/1.65 Georgia,serif}
+.keyhole-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+.keyhole-actions button{background:#f8e9cb;color:#263450;border-color:#e7c489}
+.keyhole-actions button:last-child{background:transparent;color:#fff5e5}
+@media(max-width:750px){.wandering-keyhole{top:23%;right:9%;width:40px;height:57px}.keyhole-scene{min-height:390px}}
+@media(prefers-reduced-motion:reduce){.wandering-keyhole{animation:none;opacity:1}}
