@@ -41,3 +41,24 @@
 
 /* Improve heritage eyebrow contrast against bright sky */
 .entry .intro-stage .eyebrow{color:#263b58;text-shadow:0 1px 2px rgba(255,250,237,.9),0 0 8px rgba(255,250,237,.65)}
+
+/* Great Hall: full-bleed cinematic illustration with a seamless storybook fade */
+.hall-hero{position:relative;isolation:isolate;min-height:calc(100svh - 55px);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:#342d2b;color:#fff5e4}
+.hall-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:-2}
+.hall-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(19,21,31,.06) 0%,rgba(23,25,33,.05) 38%,rgba(29,24,29,.38) 64%,rgba(27,23,29,.80) 100%)}
+.hall-overlay{width:min(100%,980px);padding:clamp(35px,6vw,75px) 24px clamp(80px,11vh,135px);text-align:center;text-shadow:0 2px 14px #14121ca8}
+.hall-eyebrow{color:#ffe1a6;letter-spacing:.24em;text-transform:uppercase;font-weight:800;font-size:.78rem}
+.hall-hero h1{font-size:clamp(3.2rem,8vw,6.5rem);margin:14px 0 16px}
+.hall-intro{font:clamp(1.15rem,2.3vw,1.55rem)/1.6 Georgia,serif;max-width:680px;margin:0 auto 25px}
+.hall-scroll{display:inline-flex;gap:12px;align-items:center;padding:10px 20px;color:#ffe6b5;border-bottom:1px solid #e6c17c;text-decoration:none;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase}
+.hall-scroll:hover{color:white}
+.hall-story{position:relative;padding-top:clamp(80px,11vw,135px)}
+.hall-story:before{content:"";position:absolute;top:0;left:0;right:0;height:0;pointer-events:none}
+.hall-hero+.hall-story{background:linear-gradient(to bottom,#f1e6d6 0%,var(--cream) 170px)}
+.hall-hero .hall-eyebrow,.hall-hero h1,.hall-hero .hall-intro,.hall-hero .hall-scroll{animation:hall-reveal 1s ease-out both}
+.hall-hero .hall-eyebrow,.hall-hero h1{animation-delay:1.25s}
+.hall-hero .hall-intro{animation-delay:2.15s}
+.hall-hero .hall-scroll{animation-delay:2.85s}
+@keyframes hall-reveal{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:750px){.hall-hero{min-height:calc(100svh - 90px)}.hall-background{object-position:center center}.hall-overlay{padding:35px 20px 65px}.hall-hero:before{background:linear-gradient(to bottom,rgba(19,21,31,.08),rgba(23,25,33,.12) 35%,rgba(29,24,29,.45) 62%,rgba(27,23,29,.83))}}
+@media(prefers-reduced-motion:reduce){.hall-hero .hall-eyebrow,.hall-hero h1,.hall-hero .hall-intro,.hall-hero .hall-scroll{animation:none}}
