@@ -4,6 +4,8 @@
 <script>
 (()=>{'use strict';const base='https://gnomeville.github.io/',chirp=base+'chirp/',wiki=base+'wikignome/';const site=u=>u&&u.startsWith('http')?u:u?base+u:null;const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’']/g,'').replace(/[^a-z0-9# ]/g,' ');const records=[];function add(title,type,icon,desc,path,terms='',date='2026-10-28'){records.push({title,type,icon,desc,url:site(path),terms,date})}
 const curated=[
+['Museum of Strategic Pecan History','Websites','🐦‍⬛','Gnomeville’s newest cultural landmark. One pecan, a Raven Wing, and an endowment of 0¢.','pecan-museum/','museum raven strategic pecan history rook summit tourism travel raven wing original pecan'],
+['Visit Gnomeville · Tourism & Travel','Websites','🧳','The official municipal visitor guide, featuring the Museum of Strategic Pecan History.','travel.html','tourism travel visit attractions museum destinations visitor guide'],
 ['Twisted Sisters Café','Websites','☕','Excessive whipped cream. Questionable qualifications. Impeccable beverages.','twisted-sisters.html','cafe coffee cake menu cecil glowbones hospitality'],
 ['Château Gnomeville','Websites','🍷','An independent wine estate, established 1823. Discover six estate-bottled wines.','chateau-gnomeville/','winery wine chateau vineyards cellar tasting vivienne etienne'],
 ['Château Gnomeville · Heritage','Websites','🏰','A centuries-old estate and the people entrusted with its stewardship.','chateau-gnomeville/#heritage','estate history vivienne de vigne etienne fox badger'],
