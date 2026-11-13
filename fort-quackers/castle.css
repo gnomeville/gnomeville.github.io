@@ -80,3 +80,41 @@
 .garden-hero .garden-scroll{animation-delay:2.85s}
 @media(max-width:750px){.garden-hero{min-height:calc(100svh - 90px)}.garden-background{object-position:center center}.garden-overlay{padding:35px 20px 65px}.garden-hero:before{background:linear-gradient(to bottom,rgba(27,40,43,.03),rgba(27,40,43,.1) 35%,rgba(27,40,43,.42) 62%,rgba(25,37,44,.83))}}
 @media(prefers-reduced-motion:reduce){.garden-hero .garden-eyebrow,.garden-hero h1,.garden-hero .garden-intro,.garden-hero .garden-scroll{animation:none}}
+
+/* Four room-specific cinematic scenes, sharing the Great Hall's reveal rhythm */
+.cinematic-room{position:relative;isolation:isolate;min-height:calc(100svh - 55px);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:#34415b;color:#fff9ee}
+.cinematic-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:-2}
+.cinematic-room:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(20,25,40,.03) 0%,rgba(20,25,40,.06) 35%,rgba(20,25,40,.37) 62%,rgba(20,25,40,.81) 100%)}
+.cinematic-overlay{width:min(100%,980px);padding:clamp(35px,6vw,75px) 24px clamp(75px,11vh,130px);text-align:center;text-shadow:0 2px 13px #101b2cb5}
+.cinematic-eyebrow{color:#f9dfaa;letter-spacing:.24em;text-transform:uppercase;font-weight:800;font-size:.78rem}
+.cinematic-room h1{font-size:clamp(3rem,8vw,6.3rem);margin:14px 0 16px}
+.cinematic-intro{font:clamp(1.15rem,2.3vw,1.5rem)/1.6 Georgia,serif;max-width:710px;margin:0 auto 25px}
+.cinematic-scroll{display:inline-flex;gap:12px;align-items:center;padding:10px 20px;color:#ffe6b5;border-bottom:1px solid #e6c17c;text-decoration:none;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase}
+.cinematic-scroll:hover{color:white}
+.cinematic-story{padding-top:clamp(80px,11vw,135px)}
+.cinematic-room .cinematic-eyebrow,.cinematic-room h1,.cinematic-room .cinematic-intro,.cinematic-room .cinematic-scroll{animation:hall-reveal 1s ease-out both}
+.cinematic-room .cinematic-eyebrow,.cinematic-room h1{animation-delay:1.25s}
+.cinematic-room .cinematic-intro{animation-delay:2.15s}
+.cinematic-room .cinematic-scroll{animation-delay:2.85s}
+/* Nest: moonlit lavender, deliberately gentle */
+.cinematic-nest{background:#343958}
+.cinematic-nest:before{background:linear-gradient(to bottom,rgba(25,23,55,.02),rgba(30,28,62,.08) 37%,rgba(37,31,72,.44) 64%,rgba(34,29,65,.85))}
+.cinematic-nest .cinematic-eyebrow{color:#e8d9ff}
+.cinematic-nest .cinematic-scroll{color:#f3e5ff;border-color:#bca6db}
+.cinematic-story-nest{background:linear-gradient(to bottom,#e9e4f2,var(--cream) 190px)}
+/* Barracks: imposing naval command */
+.cinematic-barracks{background:#1d304c}
+.cinematic-barracks:before{background:linear-gradient(to bottom,rgba(13,27,49,.12),rgba(13,27,49,.18) 35%,rgba(13,27,49,.59) 65%,rgba(13,27,49,.92))}
+.cinematic-barracks .cinematic-eyebrow{color:#d8bb7d}
+.cinematic-story-barracks{background:linear-gradient(to bottom,#dce5ef,var(--cream) 200px)}
+/* Bestie Lounge: cheerful daylight, soft peach and lavender */
+.cinematic-lounge{background:#b6a7bb}
+.cinematic-lounge:before{background:linear-gradient(to bottom,rgba(49,32,56,.01),rgba(49,32,56,.04) 34%,rgba(62,43,68,.42) 63%,rgba(48,34,58,.81))}
+.cinematic-lounge .cinematic-eyebrow{color:#ffe4bb}
+.cinematic-story-lounge{background:linear-gradient(to bottom,#f3e7ed,var(--cream) 200px)}
+/* Battlements: historic stone and golden-hour light */
+.cinematic-battlements{background:#38445a}
+.cinematic-battlements:before{background:linear-gradient(to bottom,rgba(18,30,49,.04),rgba(18,30,49,.12) 36%,rgba(18,30,49,.47) 64%,rgba(18,30,49,.87))}
+.cinematic-story-battlements{background:linear-gradient(to bottom,#ede2cd,var(--cream) 200px)}
+@media(max-width:750px){.cinematic-room{min-height:calc(100svh - 90px)}.cinematic-overlay{padding:35px 20px 65px}.cinematic-room h1{font-size:clamp(2.7rem,11vw,4.7rem)}}
+@media(prefers-reduced-motion:reduce){.cinematic-room .cinematic-eyebrow,.cinematic-room h1,.cinematic-room .cinematic-intro,.cinematic-room .cinematic-scroll{animation:none}}
