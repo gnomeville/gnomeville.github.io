@@ -81,6 +81,14 @@
       "icon": "🍮",
       "description": "Exclusive dessert glamour from Rook. Fictional memberships, very real custard.",
       "keywords": "onlyflans rook flan cheesecake desserts subscriptions parody"
+    },
+    {
+      "name": "Fort Quackers: The Cuddle Citadel",
+      "url": "/fort-quackers/",
+      "icon": "🦆",
+      "description": "Explore an ancient restored castle, six storybook rooms, the Navy Squeals and the wandering golden skeleton key.",
+      "keywords": "fort quackers cuddle citadel deputy assistant quackers navy squeals castle drawbridge great hall courtyard gardens nest barracks bestie lounge battlements golden skeleton key forgotten chamber ice cream",
+      "index": "/fort-quackers/search-index.json"
     }
   ]
 }
