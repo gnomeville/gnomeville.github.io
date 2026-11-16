@@ -88,6 +88,14 @@
       "icon": "🦆",
       "description": "Explore an ancient restored castle, six storybook rooms, the Navy Squeals and the wandering golden skeleton key.",
       "keywords": "fort quackers cuddle citadel deputy assistant quackers navy squeals castle drawbridge great hall courtyard gardens nest barracks bestie lounge battlements golden skeleton key forgotten chamber ice cream"
+    },
+    {
+      "name": "Gnomeflix",
+      "url": "/gnomeflix/",
+      "icon": "🎬",
+      "description": "Gnomeville's streaming-style film archive featuring Milo Chicken and the town's cinematic productions.",
+      "keywords": "gnomeflix movies film cinema posters milo chicken gnomeville pictures",
+      "index": "/gnomeflix/search-index.json"
     }
   ]
 }
