@@ -20,6 +20,8 @@ const featured=document.getElementById('catalog-featured'),track=document.getEle
 const lower=v=>String(v||'').toLocaleLowerCase();
 const node=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
 const knownCovers={
+ 'GPL-019':{src:'library-images/One_Pot_No_Questions_Transparent.png',alt:'Original cover of One Pot, No Questions by Helga Knucklebaum Sparklebottom'},
+ 'GPL-047':{src:'library-images/lucy-gmz-cover.png',alt:'GMZ Gnome Mile Zone Issue 001 cover, Lucy’s Gone Wild!'},
  'GPL-048':{src:'library-images/boners-of-the-dead-front.png',alt:'Approved front cover of Boners of the Dead by Rook Everhart'},
  'GPL-010':{src:'library-images/who-moved-my-cheese-front.png',alt:'Approved cover of Who Moved My Cheese? An Investigation into the 1987 Dairy Disappearance'},
  'GPL-011':{src:'library-images/goodnight-gnome-front.png',alt:'Approved cover of Goodnight Gnome'},
